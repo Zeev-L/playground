@@ -1,5 +1,10 @@
 # zeev-playground — personal Claude Code skill marketplace
 
+### 🔎 Browse the interactive catalog → **https://zeev-l.github.io/playground/**
+_Filter 221 skills by role, search, and copy install commands — including “Copy all install commands.”_
+
+---
+
 A personal [Claude Code](https://claude.com/claude-code) marketplace that **references** skills
 living in curated open-source repos. Most plugins point at **my own Zeev-L clones** of the upstream
 repos (for backup + stability); each clone auto-syncs from its upstream daily via a GitHub Action.
