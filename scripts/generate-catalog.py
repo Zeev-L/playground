@@ -34,18 +34,21 @@ ROLE = {
     "claude-reviewer": "Utilities",
     "skill-reviewer": "Utilities",
 }
-ROLES_ORDER = ["Software dev", "Ops/DevOps", "Project mgmt", "Product mgmt",
+ROLES_ORDER = ["Software dev", "DevOps/SRE", "Project mgmt", "Product mgmt",
                "PMM / Biz dev", "Utilities"]
 
-# gstack spans dev + ops; these skills cleanly fit Ops/DevOps (deploy / release / infra / security).
-# Everything else in gstack stays under its plugin's base role (Software dev).
-GSTACK_OPS = {"canary", "land-and-deploy", "setup-deploy", "ship", "landing-report",
-              "setup-gbrain", "sync-gbrain", "cso"}
+# Skills (across ANY plugin) that fit DevOps/SRE: CI/CD, deployment, release automation,
+# infrastructure-as-code, observability, monitoring, reliability/SRE. Overrides the plugin's
+# base role for just these skills (so a plugin can show under both Software dev and DevOps/SRE).
+DEVOPS_SRE = {
+    "agent-skills": {"ci-cd-and-automation", "observability-and-instrumentation", "shipping-and-launch"},
+    "gstack": {"canary", "land-and-deploy", "setup-deploy", "ship", "landing-report"},
+}
 
 
 def role_for(plugin, skill_name, base_role):
-    if plugin == "gstack" and skill_name in GSTACK_OPS:
-        return "Ops/DevOps"
+    if skill_name in DEVOPS_SRE.get(plugin, ()):
+        return "DevOps/SRE"
     return base_role
 
 # source clone dir name -> (upstream slug, attribution, license)

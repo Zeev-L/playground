@@ -13,7 +13,7 @@ Upstream: **Zeev-L (original)** · License: — · Install: `claude plugin insta
 |---|---|
 | `bulletize` | Use when the user wants to convert text into clear, concise bullet points. Rewrites paragraphs or messy text into short, scannable bullets. |
 
-## agent-skills  ·  _Software dev_  (24 skills)
+## agent-skills  ·  _Software dev / DevOps/SRE_  (24 skills)
 
 Upstream: **addyosmani/agent-skills** · License: MIT · Install: `claude plugin install agent-skills@zeev-playground` · ⚠ one-time git-HTTPS config needed
 
@@ -44,7 +44,7 @@ Upstream: **addyosmani/agent-skills** · License: MIT · Install: `claude plugin
 | `test-driven-development` | Drives development with tests. Use when implementing any logic, fixing any bug, or changing any behavior. Use when you need to prove that code works, when a bug report arrives, or when you're about to modify existing functionality. |
 | `using-agent-skills` | Discovers and invokes agent skills. Use when starting a session or when you need to discover which skill applies to the current task. This is the meta-skill that governs how all other skills are discovered and invoked. |
 
-## gstack  ·  _Software dev / Ops/DevOps_  (59 skills)
+## gstack  ·  _Software dev / DevOps/SRE_  (59 skills)
 
 Upstream: **garrytan/gstack** · License: MIT · Install: `claude plugin install gstack@zeev-playground` · ⚠ one-time git-HTTPS config needed
 
