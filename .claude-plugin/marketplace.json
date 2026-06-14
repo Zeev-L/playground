@@ -3,9 +3,9 @@
   "owner": { "name": "Zeev-L" },
   "plugins": [
     {
-      "name": "bulletize",
-      "source": "./bulletize",
-      "description": "Converts text into clear bullet points"
+      "name": "text-tools",
+      "source": "./text-tools",
+      "description": "A collection of text manipulation skills"
     }
   ]
 }
