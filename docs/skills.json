@@ -1,0 +1,3308 @@
+{
+  "marketplace": "zeev-playground",
+  "roles": [
+    "Software dev",
+    "Project mgmt",
+    "Product mgmt",
+    "PMM / Biz dev",
+    "Utilities"
+  ],
+  "plugins": [
+    {
+      "name": "text-tools",
+      "role": "Utilities",
+      "upstream": "Zeev-L (original)",
+      "attribution": "Zeev-L",
+      "license": "—",
+      "install": "claude plugin install text-tools@zeev-playground",
+      "skill_count": 1,
+      "skills": [
+        {
+          "skill": "bulletize",
+          "description": "Use when the user wants to convert text into clear, concise bullet points. Rewrites paragraphs or messy text into short, scannable bullets.",
+          "rel_path": "skills/bulletize/SKILL.md"
+        }
+      ]
+    },
+    {
+      "name": "agent-skills",
+      "role": "Software dev",
+      "upstream": "addyosmani/agent-skills",
+      "attribution": "Addy Osmani",
+      "license": "MIT",
+      "install": "claude plugin install agent-skills@zeev-playground",
+      "skill_count": 24,
+      "skills": [
+        {
+          "skill": "api-and-interface-design",
+          "description": "Guides stable API and interface design. Use when designing APIs, module boundaries, or any public interface. Use when creating REST or GraphQL endpoints, defining type contracts between modules, or establishing boundaries between frontend and backend.",
+          "rel_path": "skills/api-and-interface-design/SKILL.md"
+        },
+        {
+          "skill": "browser-testing-with-devtools",
+          "description": "Tests in real browsers via Chrome DevTools MCP. Use when building or debugging anything that runs in a browser. Use when you need to inspect the DOM, capture console errors, analyze network requests, profile performance, or verify visual output with real runtime data. Requires…",
+          "rel_path": "skills/browser-testing-with-devtools/SKILL.md"
+        },
+        {
+          "skill": "ci-cd-and-automation",
+          "description": "Automates CI/CD pipeline setup. Use when setting up or modifying build and deployment pipelines. Use when you need to automate quality gates, configure test runners in CI, or establish deployment strategies.",
+          "rel_path": "skills/ci-cd-and-automation/SKILL.md"
+        },
+        {
+          "skill": "code-review-and-quality",
+          "description": "Conducts multi-axis code review. Use before merging any change. Use when reviewing code written by yourself, another agent, or a human. Use when you need to assess code quality across multiple dimensions before it enters the main branch.",
+          "rel_path": "skills/code-review-and-quality/SKILL.md"
+        },
+        {
+          "skill": "code-simplification",
+          "description": "Simplifies code for clarity. Use when refactoring code for clarity without changing behavior. Use when code works but is harder to read, maintain, or extend than it should be. Use when reviewing code that has accumulated unnecessary complexity.",
+          "rel_path": "skills/code-simplification/SKILL.md"
+        },
+        {
+          "skill": "context-engineering",
+          "description": "Optimizes agent context setup. Use when starting a new session, when agent output quality degrades, when switching between tasks, or when you need to configure rules files and context for a project.",
+          "rel_path": "skills/context-engineering/SKILL.md"
+        },
+        {
+          "skill": "debugging-and-error-recovery",
+          "description": "Guides systematic root-cause debugging. Use when tests fail, builds break, behavior doesn't match expectations, or you encounter any unexpected error. Use when you need a systematic approach to finding and fixing the root cause rather than guessing.",
+          "rel_path": "skills/debugging-and-error-recovery/SKILL.md"
+        },
+        {
+          "skill": "deprecation-and-migration",
+          "description": "Manages deprecation and migration. Use when removing old systems, APIs, or features. Use when migrating users from one implementation to another. Use when deciding whether to maintain or sunset existing code.",
+          "rel_path": "skills/deprecation-and-migration/SKILL.md"
+        },
+        {
+          "skill": "documentation-and-adrs",
+          "description": "Records decisions and documentation. Use when making architectural decisions, changing public APIs, shipping features, or when you need to record context that future engineers and agents will need to understand the codebase.",
+          "rel_path": "skills/documentation-and-adrs/SKILL.md"
+        },
+        {
+          "skill": "doubt-driven-development",
+          "description": "Subjects every non-trivial decision to a fresh-context adversarial review before it stands. Use when correctness matters more than speed, when working in unfamiliar code, when stakes are high (production, security-sensitive logic, irreversible operations), or any time a confid…",
+          "rel_path": "skills/doubt-driven-development/SKILL.md"
+        },
+        {
+          "skill": "frontend-ui-engineering",
+          "description": "Builds production-quality UIs. Use when building or modifying user-facing interfaces. Use when creating components, implementing layouts, managing state, or when the output needs to look and feel production-quality rather than AI-generated.",
+          "rel_path": "skills/frontend-ui-engineering/SKILL.md"
+        },
+        {
+          "skill": "git-workflow-and-versioning",
+          "description": "Structures git workflow practices. Use when making any code change. Use when committing, branching, resolving conflicts, or when you need to organize work across multiple parallel streams.",
+          "rel_path": "skills/git-workflow-and-versioning/SKILL.md"
+        },
+        {
+          "skill": "idea-refine",
+          "description": "Refines raw ideas into sharp, actionable concepts through structured divergent and convergent thinking. Use when an idea is still vague, when you need to stress-test assumptions before committing to a plan, or when you want to expand options before converging on one. Triggers …",
+          "rel_path": "skills/idea-refine/SKILL.md"
+        },
+        {
+          "skill": "incremental-implementation",
+          "description": "Delivers changes incrementally. Use when implementing any feature or change that touches more than one file. Use when you're about to write a large amount of code at once, or when a task feels too big to land in one step.",
+          "rel_path": "skills/incremental-implementation/SKILL.md"
+        },
+        {
+          "skill": "interview-me",
+          "description": "Extracts what the user actually wants instead of what they think they should want. Achieves this through one-question-at-a-time interview until ~95% confidence about the underlying intent. Use when an ask is underspecified (\"build me X\" without \"for whom\" or \"why now\"), when t…",
+          "rel_path": "skills/interview-me/SKILL.md"
+        },
+        {
+          "skill": "observability-and-instrumentation",
+          "description": "Instruments code so production behavior is visible and diagnosable. Use when adding logging, metrics, tracing, or alerting. Use when shipping any feature that runs in production and you need evidence it works. Use when production issues are reported but you can't tell what hap…",
+          "rel_path": "skills/observability-and-instrumentation/SKILL.md"
+        },
+        {
+          "skill": "performance-optimization",
+          "description": "Optimizes application performance. Use when performance requirements exist, when you suspect performance regressions, or when Core Web Vitals or load times need improvement. Use when profiling reveals bottlenecks that need fixing.",
+          "rel_path": "skills/performance-optimization/SKILL.md"
+        },
+        {
+          "skill": "planning-and-task-breakdown",
+          "description": "Breaks work into ordered tasks. Use when you have a spec or clear requirements and need to break work into implementable tasks. Use when a task feels too large to start, when you need to estimate scope, or when parallel work is possible.",
+          "rel_path": "skills/planning-and-task-breakdown/SKILL.md"
+        },
+        {
+          "skill": "security-and-hardening",
+          "description": "Hardens code against vulnerabilities. Use when handling user input, authentication, data storage, or external integrations. Use when building any feature that accepts untrusted data, manages user sessions, or interacts with third-party services.",
+          "rel_path": "skills/security-and-hardening/SKILL.md"
+        },
+        {
+          "skill": "shipping-and-launch",
+          "description": "Prepares production launches. Use when preparing to deploy to production. Use when you need a pre-launch checklist, when setting up monitoring, when planning a staged rollout, or when you need a rollback strategy.",
+          "rel_path": "skills/shipping-and-launch/SKILL.md"
+        },
+        {
+          "skill": "source-driven-development",
+          "description": "Grounds every implementation decision in official documentation. Use when you want authoritative, source-cited code free from outdated patterns. Use when building with any framework or library where correctness matters.",
+          "rel_path": "skills/source-driven-development/SKILL.md"
+        },
+        {
+          "skill": "spec-driven-development",
+          "description": "Creates specs before coding. Use when starting a new project, feature, or significant change and no specification exists yet. Use when requirements are unclear, ambiguous, or only exist as a vague idea.",
+          "rel_path": "skills/spec-driven-development/SKILL.md"
+        },
+        {
+          "skill": "test-driven-development",
+          "description": "Drives development with tests. Use when implementing any logic, fixing any bug, or changing any behavior. Use when you need to prove that code works, when a bug report arrives, or when you're about to modify existing functionality.",
+          "rel_path": "skills/test-driven-development/SKILL.md"
+        },
+        {
+          "skill": "using-agent-skills",
+          "description": "Discovers and invokes agent skills. Use when starting a session or when you need to discover which skill applies to the current task. This is the meta-skill that governs how all other skills are discovered and invoked.",
+          "rel_path": "skills/using-agent-skills/SKILL.md"
+        }
+      ]
+    },
+    {
+      "name": "gstack",
+      "role": "Software dev",
+      "upstream": "garrytan/gstack",
+      "attribution": "Garry Tan",
+      "license": "MIT",
+      "install": "claude plugin install gstack@zeev-playground",
+      "skill_count": 59,
+      "skills": [
+        {
+          "skill": "gstack",
+          "description": "Fast headless browser for QA testing and site dogfooding. (gstack)",
+          "rel_path": "SKILL.md"
+        },
+        {
+          "skill": "autoplan",
+          "description": "Auto-review pipeline — reads the full CEO, design, eng, and DX review skills from disk and runs them sequentially with auto-decisions using 6 decision principles. (gstack)",
+          "rel_path": "autoplan/SKILL.md"
+        },
+        {
+          "skill": "benchmark",
+          "description": "Performance regression detection using the browse daemon. (gstack)",
+          "rel_path": "benchmark/SKILL.md"
+        },
+        {
+          "skill": "benchmark-models",
+          "description": "Cross-model benchmark for gstack skills. (gstack)",
+          "rel_path": "benchmark-models/SKILL.md"
+        },
+        {
+          "skill": "browse",
+          "description": "Fast headless browser for QA testing and site dogfooding. (gstack)",
+          "rel_path": "browse/SKILL.md"
+        },
+        {
+          "skill": "hackernews-frontpage",
+          "description": "Scrape the Hacker News front page (titles, points, comment counts).",
+          "rel_path": "browser-skills/hackernews-frontpage/SKILL.md"
+        },
+        {
+          "skill": "canary",
+          "description": "Post-deploy canary monitoring. (gstack)",
+          "rel_path": "canary/SKILL.md"
+        },
+        {
+          "skill": "careful",
+          "description": "Safety guardrails for destructive commands. (gstack)",
+          "rel_path": "careful/SKILL.md"
+        },
+        {
+          "skill": "codex",
+          "description": "OpenAI Codex CLI wrapper — three modes. (gstack)",
+          "rel_path": "codex/SKILL.md"
+        },
+        {
+          "skill": "context-restore",
+          "description": "Restore working context saved earlier by /context-save. (gstack)",
+          "rel_path": "context-restore/SKILL.md"
+        },
+        {
+          "skill": "context-save",
+          "description": "Save working context. (gstack)",
+          "rel_path": "context-save/SKILL.md"
+        },
+        {
+          "skill": "cso",
+          "description": "Chief Security Officer mode. (gstack)",
+          "rel_path": "cso/SKILL.md"
+        },
+        {
+          "skill": "design-consultation",
+          "description": "Design consultation: understands your product, researches the landscape, proposes a complete design system (aesthetic, typography, color, layout, spacing, motion), and generates font+color preview... (gstack)",
+          "rel_path": "design-consultation/SKILL.md"
+        },
+        {
+          "skill": "design-html",
+          "description": "Design finalization: generates production-quality Pretext-native HTML/CSS. (gstack)",
+          "rel_path": "design-html/SKILL.md"
+        },
+        {
+          "skill": "design-review",
+          "description": "Designer's eye QA: finds visual inconsistency, spacing issues, hierarchy problems, AI slop patterns, and slow interactions — then fixes them. (gstack)",
+          "rel_path": "design-review/SKILL.md"
+        },
+        {
+          "skill": "design-shotgun",
+          "description": "Design shotgun: generate multiple AI design variants, open a comparison board, collect structured feedback, and iterate. (gstack)",
+          "rel_path": "design-shotgun/SKILL.md"
+        },
+        {
+          "skill": "devex-review",
+          "description": "Live developer experience audit. (gstack)",
+          "rel_path": "devex-review/SKILL.md"
+        },
+        {
+          "skill": "diagram",
+          "description": "Turn an English description (or mermaid source) into a diagram triplet: the source, an editable .excalidraw file you can open (gstack)",
+          "rel_path": "diagram/SKILL.md"
+        },
+        {
+          "skill": "document-generate",
+          "description": "Generate missing documentation from scratch for a feature, module, or entire project. (gstack)",
+          "rel_path": "document-generate/SKILL.md"
+        },
+        {
+          "skill": "document-release",
+          "description": "Post-ship documentation update. (gstack)",
+          "rel_path": "document-release/SKILL.md"
+        },
+        {
+          "skill": "freeze",
+          "description": "Restrict file edits to a specific directory for the session. (gstack)",
+          "rel_path": "freeze/SKILL.md"
+        },
+        {
+          "skill": "gstack-upgrade",
+          "description": "Upgrade gstack to the latest version.",
+          "rel_path": "gstack-upgrade/SKILL.md"
+        },
+        {
+          "skill": "guard",
+          "description": "Full safety mode: destructive command warnings + directory-scoped edits. (gstack)",
+          "rel_path": "guard/SKILL.md"
+        },
+        {
+          "skill": "health",
+          "description": "Code quality dashboard. (gstack)",
+          "rel_path": "health/SKILL.md"
+        },
+        {
+          "skill": "investigate",
+          "description": "Systematic debugging with root cause investigation. (gstack)",
+          "rel_path": "investigate/SKILL.md"
+        },
+        {
+          "skill": "ios-clean",
+          "description": "Remove the DebugBridge SPM package and all #if DEBUG wiring from an iOS app. (gstack)",
+          "rel_path": "ios-clean/SKILL.md"
+        },
+        {
+          "skill": "ios-design-review",
+          "description": "Visual design audit for iOS apps on real hardware. (gstack)",
+          "rel_path": "ios-design-review/SKILL.md"
+        },
+        {
+          "skill": "ios-fix",
+          "description": "Autonomous iOS bug fixer. (gstack)",
+          "rel_path": "ios-fix/SKILL.md"
+        },
+        {
+          "skill": "ios-qa",
+          "description": "Live-device iOS QA for SwiftUI apps. (gstack)",
+          "rel_path": "ios-qa/SKILL.md"
+        },
+        {
+          "skill": "ios-sync",
+          "description": "Regenerate the iOS debug bridge against the latest upstream gstack templates. (gstack)",
+          "rel_path": "ios-sync/SKILL.md"
+        },
+        {
+          "skill": "land-and-deploy",
+          "description": "Land and deploy workflow. (gstack)",
+          "rel_path": "land-and-deploy/SKILL.md"
+        },
+        {
+          "skill": "landing-report",
+          "description": "Read-only queue dashboard for workspace-aware ship. (gstack)",
+          "rel_path": "landing-report/SKILL.md"
+        },
+        {
+          "skill": "learn",
+          "description": "Manage project learnings.",
+          "rel_path": "learn/SKILL.md"
+        },
+        {
+          "skill": "make-pdf",
+          "description": "Turn any markdown file into a publication-quality PDF. (gstack)",
+          "rel_path": "make-pdf/SKILL.md"
+        },
+        {
+          "skill": "office-hours",
+          "description": "YC Office Hours — two modes. (gstack)",
+          "rel_path": "office-hours/SKILL.md"
+        },
+        {
+          "skill": "open-gstack-browser",
+          "description": "Launch GStack Browser — AI-controlled Chromium with the sidebar extension baked in.",
+          "rel_path": "open-gstack-browser/SKILL.md"
+        },
+        {
+          "skill": "gstack-openclaw-ceo-review",
+          "description": "Use when asked to review a plan, challenge a proposal, run a CEO review, poke holes in an approach, think bigger about scope, or decide whether to expand or reduce the plan.",
+          "rel_path": "openclaw/skills/gstack-openclaw-ceo-review/SKILL.md"
+        },
+        {
+          "skill": "gstack-openclaw-investigate",
+          "description": "Use when asked to debug, fix a bug, investigate an error, or do root cause analysis, and when users report errors, stack traces, unexpected behavior, or say something stopped working.",
+          "rel_path": "openclaw/skills/gstack-openclaw-investigate/SKILL.md"
+        },
+        {
+          "skill": "gstack-openclaw-office-hours",
+          "description": "Use when asked to brainstorm, evaluate whether an idea is worth building, run office hours, or think through a new product idea or design direction before any code is written.",
+          "rel_path": "openclaw/skills/gstack-openclaw-office-hours/SKILL.md"
+        },
+        {
+          "skill": "gstack-openclaw-retro",
+          "description": "Weekly engineering retrospective. Analyzes commit history, work patterns, and code quality metrics with persistent history and trend tracking. Team-aware with per-person contributions, praise, and growth areas. Use when asked for weekly retro, what shipped this week, or engine…",
+          "rel_path": "openclaw/skills/gstack-openclaw-retro/SKILL.md"
+        },
+        {
+          "skill": "pair-agent",
+          "description": "Pair a remote AI agent with your browser. (gstack)",
+          "rel_path": "pair-agent/SKILL.md"
+        },
+        {
+          "skill": "plan-ceo-review",
+          "description": "CEO/founder-mode plan review. (gstack)",
+          "rel_path": "plan-ceo-review/SKILL.md"
+        },
+        {
+          "skill": "plan-design-review",
+          "description": "Designer's eye plan review — interactive, like CEO and Eng review. (gstack)",
+          "rel_path": "plan-design-review/SKILL.md"
+        },
+        {
+          "skill": "plan-devex-review",
+          "description": "Interactive developer experience plan review. (gstack)",
+          "rel_path": "plan-devex-review/SKILL.md"
+        },
+        {
+          "skill": "plan-eng-review",
+          "description": "Eng manager-mode plan review. (gstack)",
+          "rel_path": "plan-eng-review/SKILL.md"
+        },
+        {
+          "skill": "plan-tune",
+          "description": "Self-tuning question sensitivity + developer psychographic for gstack (v1: observational). (gstack)",
+          "rel_path": "plan-tune/SKILL.md"
+        },
+        {
+          "skill": "qa",
+          "description": "Systematically QA test a web application and fix bugs found. (gstack)",
+          "rel_path": "qa/SKILL.md"
+        },
+        {
+          "skill": "qa-only",
+          "description": "Report-only QA testing. (gstack)",
+          "rel_path": "qa-only/SKILL.md"
+        },
+        {
+          "skill": "retro",
+          "description": "Weekly engineering retrospective. (gstack)",
+          "rel_path": "retro/SKILL.md"
+        },
+        {
+          "skill": "review",
+          "description": "Pre-landing PR review. (gstack)",
+          "rel_path": "review/SKILL.md"
+        },
+        {
+          "skill": "scrape",
+          "description": "Pull data from a web page. (gstack)",
+          "rel_path": "scrape/SKILL.md"
+        },
+        {
+          "skill": "setup-browser-cookies",
+          "description": "Import cookies from your real Chromium browser into the headless browse session. (gstack)",
+          "rel_path": "setup-browser-cookies/SKILL.md"
+        },
+        {
+          "skill": "setup-deploy",
+          "description": "Configure deployment settings for /land-and-deploy.",
+          "rel_path": "setup-deploy/SKILL.md"
+        },
+        {
+          "skill": "setup-gbrain",
+          "description": "Set up gbrain for this coding agent: install the CLI, initialize a local PGLite or Supabase brain, register MCP, capture per-remote trust policy. (gstack)",
+          "rel_path": "setup-gbrain/SKILL.md"
+        },
+        {
+          "skill": "ship",
+          "description": "Ship workflow: detect + merge base branch, run tests, review diff, bump VERSION, update CHANGELOG, commit, push, create PR. (gstack)",
+          "rel_path": "ship/SKILL.md"
+        },
+        {
+          "skill": "skillify",
+          "description": "Codify the most recent successful /scrape flow into a permanent browser-skill on disk. (gstack)",
+          "rel_path": "skillify/SKILL.md"
+        },
+        {
+          "skill": "spec",
+          "description": "Turn vague intent into a precise, executable spec in five phases. (gstack)",
+          "rel_path": "spec/SKILL.md"
+        },
+        {
+          "skill": "sync-gbrain",
+          "description": "Keep gbrain current with this repo's code and refresh agent search guidance in CLAUDE.md. Wraps the gstack-gbrain-sync orchestrator with state (gstack)",
+          "rel_path": "sync-gbrain/SKILL.md"
+        },
+        {
+          "skill": "unfreeze",
+          "description": "Clear the freeze boundary set by /freeze, allowing edits to all directories again. (gstack)",
+          "rel_path": "unfreeze/SKILL.md"
+        }
+      ]
+    },
+    {
+      "name": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "upstream": "menkesu/awesome-pm-skills",
+      "attribution": "menkesu",
+      "license": "MIT",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "skill_count": 29,
+      "skills": [
+        {
+          "skill": "ai-product-patterns",
+          "description": "Builds AI-native products using OpenAI's development philosophy and modern AI UX patterns. Use when integrating AI features, designing for model improvements, implementing evals as product specs, or creating AI-first experiences. Based on Kevin Weil (OpenAI CPO) on building fo…",
+          "rel_path": "ai-product-patterns/SKILL.md"
+        },
+        {
+          "skill": "ai-startup-building",
+          "description": "Builds AI-native products using Dan Shipper's 5-product playbook and Brandon Chu's AI product frameworks. Use when implementing prompt engineering, creating AI-native UX, scaling AI products, or optimizing costs. Focuses on 2025+ best practices.",
+          "rel_path": "ai-startup-building/SKILL.md"
+        },
+        {
+          "skill": "career-growth",
+          "description": "Plans PM career growth using frameworks from 40+ career episodes and Ami Vora's advancement strategies. Use when planning promotions, identifying skill gaps, navigating career transitions, or choosing between IC and management paths.",
+          "rel_path": "career-growth/SKILL.md"
+        },
+        {
+          "skill": "confident-speaking",
+          "description": "Structures presentations and verbal pitches using Matt Abrahams' WHAT-SO WHAT-NOW WHAT framework and impromptu speaking techniques. Use when preparing presentations, creating talking points, or practicing difficult conversations.",
+          "rel_path": "confident-speaking/SKILL.md"
+        },
+        {
+          "skill": "continuous-discovery",
+          "description": "Implements Teresa Torres' continuous discovery habits for weekly customer contact, opportunity solution trees, and assumption testing. Use when building discovery processes, conducting user research, validating assumptions, or establishing product trio workflows.",
+          "rel_path": "continuous-discovery/SKILL.md"
+        },
+        {
+          "skill": "culture-craft",
+          "description": "Designs team culture and sets standards of excellence using David Singleton (Stripe) and Dharmesh Shah (HubSpot) frameworks. Use when building teams, setting cultural values, creating rituals, or establishing excellence standards.",
+          "rel_path": "culture-craft/SKILL.md"
+        },
+        {
+          "skill": "decision-frameworks",
+          "description": "Structures difficult decisions using Annie Duke's probabilistic thinking and Ben Horowitz's hard decisions frameworks. Use when facing tough choices, applying expected value thinking, or reducing decision paralysis with regret minimization and pre-mortems.",
+          "rel_path": "decision-frameworks/SKILL.md"
+        },
+        {
+          "skill": "design-first-dev",
+          "description": "Follows Airbnb's design-led development and Figma's craft quality standards. Use when building user-facing features, making UI/UX decisions, determining when details matter, or applying design system thinking. Guides when to move fast vs when quality creates moats. Based on Br…",
+          "rel_path": "design-first-dev/SKILL.md"
+        },
+        {
+          "skill": "exec-comms",
+          "description": "Drafts executive memos and stakeholder communications using Amazon's 6-pager structure, Stripe's memo format, and SCQA framework. Use when writing board updates, executive summaries, or strategic documents.",
+          "rel_path": "exec-comms/SKILL.md"
+        },
+        {
+          "skill": "exp-driven-dev",
+          "description": "Builds features with A/B testing in mind using Ronny Kohavi's frameworks and Netflix/Airbnb experimentation culture. Use when implementing feature flags, choosing metrics, designing experiments, or building for fast iteration. Focuses on guardrail metrics, statistical signific…",
+          "rel_path": "exp-driven-dev/SKILL.md"
+        },
+        {
+          "skill": "growth-embedded",
+          "description": "Builds growth loops into products from day 1 using YC playbook (Gustaf Alstromer), Casey Winters growth frameworks, and Elena Verna's retention-first approach. Use when adding viral mechanics, instrumenting analytics, creating referral systems, or optimizing for retention over…",
+          "rel_path": "growth-embedded/SKILL.md"
+        },
+        {
+          "skill": "influence-craft",
+          "description": "Maps organizational power dynamics and builds influence without authority using Jeffrey Pfeffer's power frameworks. Use when getting buy-in for ideas, navigating company politics, managing up, or building coalitions across teams.",
+          "rel_path": "influence-craft/SKILL.md"
+        },
+        {
+          "skill": "jtbd-building",
+          "description": "Builds features based on Jobs-to-be-Done theory using Bob Moesta's frameworks. Use when designing features, identifying customer jobs, understanding push/pull forces, or uncovering hidden needs beyond stated feature requests.",
+          "rel_path": "jtbd-building/SKILL.md"
+        },
+        {
+          "skill": "launch-execution",
+          "description": "Helps write launch copy, position products, and create go-to-market materials using April Dunford's positioning framework and Airbnb's product marketing approach. Use when launching features, writing announcements, creating marketing materials, or positioning products.",
+          "rel_path": "launch-execution/SKILL.md"
+        },
+        {
+          "skill": "metrics-frameworks",
+          "description": "Defines right metrics using North Star framework, AARRR, and leading vs lagging indicators. Use when choosing metrics, instrumenting products, creating dashboards, or distinguishing vanity metrics from actionable ones.",
+          "rel_path": "metrics-frameworks/SKILL.md"
+        },
+        {
+          "skill": "okr-frameworks",
+          "description": "Writes effective OKRs using Christina Wodtke's best practices and Google's OKR methodology. Use when setting goals, aligning teams, creating measurement frameworks, or tracking quarterly progress.",
+          "rel_path": "okr-frameworks/SKILL.md"
+        },
+        {
+          "skill": "one-step-better-ai-pm",
+          "description": "Get one actionable improvement for your AI product based on the latest GenAI PM briefs. Fetch the last 5 days of curated AI PM insights from genaipm.com, analyze the current repo/project, find synergy between trending topics and the user's work, then research the source materi…",
+          "rel_path": "one-step-better-ai-pm/SKILL.md"
+        },
+        {
+          "skill": "positioning-craft",
+          "description": "Crafts product positioning using April Dunford's positioning framework. Use when defining target customers, choosing categories, identifying alternatives, or articulating differentiated value. Based on Obviously Awesome methodology.",
+          "rel_path": "positioning-craft/SKILL.md"
+        },
+        {
+          "skill": "prioritization-craft",
+          "description": "Applies prioritization frameworks including RICE, ICE, Value vs Effort, and Kano model. Use when prioritizing features, managing backlog, making tradeoffs, or saying no gracefully. Based on Shreyas Doshi and Intercom frameworks.",
+          "rel_path": "prioritization-craft/SKILL.md"
+        },
+        {
+          "skill": "quality-speed",
+          "description": "Decides when quality matters vs move fast, based on Dylan Field (Figma) craft philosophy and Brian Chesky (Airbnb) details obsession. Use when balancing shipping speed with excellence, deciding if refactoring is needed, or determining which details create moats vs which to skip.",
+          "rel_path": "quality-speed/SKILL.md"
+        },
+        {
+          "skill": "ship-decisions",
+          "description": "Guides \"ship or iterate?\" decisions using Shreyas Doshi's frameworks, Marty Cagan's shipping philosophy, and Tobi Lutke's reversible decision-making. Use when deciding if feature is ready, preventing perfectionism paralysis, applying one-way vs two-way door thinking, or balanc…",
+          "rel_path": "ship-decisions/SKILL.md"
+        },
+        {
+          "skill": "stakeholder-craft",
+          "description": "Manages stakeholder relationships using Kim Scott's Radical Candor and Carole Robin's interpersonal dynamics. Use when giving/receiving feedback, navigating difficult conversations, or building trust across teams.",
+          "rel_path": "stakeholder-craft/SKILL.md"
+        },
+        {
+          "skill": "strategic-build",
+          "description": "Distinguishes strategic vs tactical work during development using Shreyas Doshi's frameworks and Marty Cagan's empowered teams principles. Use when making architectural decisions, choosing what to build, preventing \"product theater\", or applying the LNO framework (Leverage, Ne…",
+          "rel_path": "strategic-build/SKILL.md"
+        },
+        {
+          "skill": "strategic-pm",
+          "description": "Shifts thinking from tactical to strategic using Anneka Gupta's frameworks for becoming more strategic. Use when escaping feature factory, moving from output to outcomes, or communicating strategic value.",
+          "rel_path": "strategic-pm/SKILL.md"
+        },
+        {
+          "skill": "strategic-storytelling",
+          "description": "Crafts product narratives using Andy Raskin's strategic narrative structure and Nancy Duarte's presentation frameworks. Use when writing pitches, creating presentations, framing features as stories, or building compelling product narratives.",
+          "rel_path": "strategic-storytelling/SKILL.md"
+        },
+        {
+          "skill": "strategy-frameworks",
+          "description": "Creates product strategies using Crossing the Chasm, Playing to Win, and strategic canvas frameworks. Use when defining where to play and how to win, choosing beachhead markets, or connecting tactics to strategy.",
+          "rel_path": "strategy-frameworks/SKILL.md"
+        },
+        {
+          "skill": "user-feedback-system",
+          "description": "Builds feedback collection systems using Superhuman's PMF framework and YC's \"talk to users\" methodology. Use when implementing NPS surveys, scheduling user interviews, or measuring product-market fit.",
+          "rel_path": "user-feedback-system/SKILL.md"
+        },
+        {
+          "skill": "workplace-navigation",
+          "description": "Handles difficult colleagues and resolves conflicts using frameworks from Anneka Gupta and workplace dynamics research. Use when dealing with blocking colleagues, toxic dynamics, or maintaining relationships under stress.",
+          "rel_path": "workplace-navigation/SKILL.md"
+        },
+        {
+          "skill": "zero-to-launch",
+          "description": "Guides Claude from idea to working prototype using frameworks from OpenAI, Figma, and Airbnb. Use when starting new product features, planning MVP scope, making build-vs-buy decisions, or guiding users from concept to shippable prototype. Applies AI-first thinking (Kevin Weil)…",
+          "rel_path": "zero-to-launch/SKILL.md"
+        }
+      ]
+    },
+    {
+      "name": "pm-product-discovery",
+      "role": "Product mgmt",
+      "upstream": "phuryn/pm-skills",
+      "attribution": "Pawel Huryn",
+      "license": "MIT",
+      "install": "claude plugin install pm-product-discovery@zeev-playground",
+      "skill_count": 13,
+      "skills": [
+        {
+          "skill": "analyze-feature-requests",
+          "description": "Analyze and prioritize a list of feature requests by theme, strategic alignment, impact, effort, and risk. Use when reviewing customer feature requests, triaging a backlog, or making prioritization decisions.",
+          "rel_path": "skills/analyze-feature-requests/SKILL.md"
+        },
+        {
+          "skill": "brainstorm-experiments-existing",
+          "description": "Design experiments to test assumptions for an existing product — prototypes, A/B tests, spikes, and other low-effort validation methods. Use when validating assumptions, testing feature ideas cheaply, or planning product experiments.",
+          "rel_path": "skills/brainstorm-experiments-existing/SKILL.md"
+        },
+        {
+          "skill": "brainstorm-experiments-new",
+          "description": "Design lean startup experiments (pretotypes) for a new product. Creates XYZ hypotheses and suggests low-effort validation methods like landing pages, explainer videos, and pre-orders. Use when validating a new product idea, creating pretotypes, or testing market demand.",
+          "rel_path": "skills/brainstorm-experiments-new/SKILL.md"
+        },
+        {
+          "skill": "brainstorm-ideas-existing",
+          "description": "Brainstorm product ideas for an existing product using multi-perspective ideation from PM, Designer, and Engineer viewpoints. Use when generating new feature ideas, brainstorming solutions for an identified opportunity, or ideating with a product trio.",
+          "rel_path": "skills/brainstorm-ideas-existing/SKILL.md"
+        },
+        {
+          "skill": "brainstorm-ideas-new",
+          "description": "Brainstorm feature ideas for a new product in initial discovery from PM, Designer, and Engineer perspectives. Use when starting product discovery for a new product, exploring features for a startup idea, or doing initial ideation.",
+          "rel_path": "skills/brainstorm-ideas-new/SKILL.md"
+        },
+        {
+          "skill": "identify-assumptions-existing",
+          "description": "Identify risky assumptions for a feature idea in an existing product across Value, Usability, Viability, and Feasibility. Uses multi-perspective devil's advocate thinking. Use when stress-testing a feature idea, doing risk assessment, or preparing for assumption mapping.",
+          "rel_path": "skills/identify-assumptions-existing/SKILL.md"
+        },
+        {
+          "skill": "identify-assumptions-new",
+          "description": "Identify risky assumptions for a new product idea across 8 risk categories including Go-to-Market, Strategy, and Team. Use when evaluating startup risks, assessing a new product concept, or mapping assumptions for a new venture.",
+          "rel_path": "skills/identify-assumptions-new/SKILL.md"
+        },
+        {
+          "skill": "interview-script",
+          "description": "Create a structured customer interview script with JTBD probing questions, warm-up, core exploration, and wrap-up sections. Follows The Mom Test principles — no leading questions, no pitching, focus on past behavior. Use when preparing for user interviews, creating interview g…",
+          "rel_path": "skills/interview-script/SKILL.md"
+        },
+        {
+          "skill": "metrics-dashboard",
+          "description": "Define and design a product metrics dashboard with key metrics, data sources, visualization types, and alert thresholds. Use when creating a metrics dashboard, defining KPIs, setting up product analytics, or building a data monitoring plan.",
+          "rel_path": "skills/metrics-dashboard/SKILL.md"
+        },
+        {
+          "skill": "opportunity-solution-tree",
+          "description": "Build an Opportunity Solution Tree (OST) to structure product discovery — map a desired outcome to opportunities, solutions, and experiments. Based on Teresa Torres' Continuous Discovery Habits. Use when structuring discovery work, mapping opportunities to solutions, or decidi…",
+          "rel_path": "skills/opportunity-solution-tree/SKILL.md"
+        },
+        {
+          "skill": "prioritize-assumptions",
+          "description": "Prioritize assumptions using an Impact × Risk matrix and suggest experiments for each. Use when triaging a list of assumptions, deciding what to test first, or applying the assumption prioritization canvas.",
+          "rel_path": "skills/prioritize-assumptions/SKILL.md"
+        },
+        {
+          "skill": "prioritize-features",
+          "description": "Prioritize a backlog of feature ideas based on impact, effort, risk, and strategic alignment with top 5 recommendations. Use when prioritizing a feature backlog, making scope decisions, or ranking product ideas.",
+          "rel_path": "skills/prioritize-features/SKILL.md"
+        },
+        {
+          "skill": "summarize-interview",
+          "description": "Summarize a customer interview transcript into a structured template with JTBD, satisfaction signals, and action items. Use when processing interview recordings or transcripts, synthesizing discovery interviews, or creating interview summaries.",
+          "rel_path": "skills/summarize-interview/SKILL.md"
+        }
+      ]
+    },
+    {
+      "name": "pm-product-strategy",
+      "role": "Product mgmt",
+      "upstream": "phuryn/pm-skills",
+      "attribution": "Pawel Huryn",
+      "license": "MIT",
+      "install": "claude plugin install pm-product-strategy@zeev-playground",
+      "skill_count": 12,
+      "skills": [
+        {
+          "skill": "ansoff-matrix",
+          "description": "Generate an Ansoff Matrix analysis mapping growth strategies across market penetration, market development, product development, and diversification. Use when considering growth options, planning market expansion, or evaluating strategic growth paths.",
+          "rel_path": "skills/ansoff-matrix/SKILL.md"
+        },
+        {
+          "skill": "business-model",
+          "description": "Generate a Business Model Canvas with all 9 building blocks. Use when creating a business model, documenting how a business creates value, or analyzing an existing business model.",
+          "rel_path": "skills/business-model/SKILL.md"
+        },
+        {
+          "skill": "lean-canvas",
+          "description": "Generate a Lean Canvas with problem, solution, metrics, cost structure, UVP, unfair advantage, channels, segments, and revenue. Use when exploring a lean startup canvas, testing a business hypothesis, or modeling a new venture.",
+          "rel_path": "skills/lean-canvas/SKILL.md"
+        },
+        {
+          "skill": "monetization-strategy",
+          "description": "Brainstorm 3-5 monetization strategies with audience fit, risks, and validation experiments. Use when exploring revenue models, evaluating pricing strategies, or deciding how to monetize a product.",
+          "rel_path": "skills/monetization-strategy/SKILL.md"
+        },
+        {
+          "skill": "pestle-analysis",
+          "description": "Perform a PESTLE analysis covering Political, Economic, Social, Technological, Legal, and Environmental factors. Use when assessing the macro environment, doing strategic planning, or evaluating external factors affecting your business.",
+          "rel_path": "skills/pestle-analysis/SKILL.md"
+        },
+        {
+          "skill": "porters-five-forces",
+          "description": "Perform Porter's Five Forces analysis — competitive rivalry, supplier power, buyer power, threat of substitutes, and threat of new entrants. Use when analyzing industry dynamics, assessing competitive forces, or evaluating market attractiveness.",
+          "rel_path": "skills/porters-five-forces/SKILL.md"
+        },
+        {
+          "skill": "pricing-strategy",
+          "description": "Analyze and design pricing strategies including pricing models, competitive pricing analysis, willingness-to-pay estimation, and price elasticity. Use when setting prices, evaluating pricing models, preparing for a pricing change, or comparing freemium vs paid approaches.",
+          "rel_path": "skills/pricing-strategy/SKILL.md"
+        },
+        {
+          "skill": "product-strategy",
+          "description": "Create a comprehensive product strategy using the 9-section Product Strategy Canvas — vision, segments, costs, value propositions, trade-offs, metrics, growth, capabilities, and defensibility. Use when building a product strategy, creating a strategic plan, or defining product…",
+          "rel_path": "skills/product-strategy/SKILL.md"
+        },
+        {
+          "skill": "product-vision",
+          "description": "Brainstorm an inspiring, achievable, and emotional product vision that motivates teams and aligns stakeholders. Use when defining or refining a product vision, creating a vision statement, or aligning the team around a shared direction.",
+          "rel_path": "skills/product-vision/SKILL.md"
+        },
+        {
+          "skill": "startup-canvas",
+          "description": "Generate a Startup Canvas combining Product Strategy (9 sections) and Business Model (costs + revenue) for a new product. An alternative to BMC and Lean Canvas that separates strategy from business model. Use when launching a new product or evaluating a startup concept.",
+          "rel_path": "skills/startup-canvas/SKILL.md"
+        },
+        {
+          "skill": "swot-analysis",
+          "description": "Perform a detailed SWOT analysis — strengths, weaknesses, opportunities, and threats with actionable recommendations. Use when doing strategic assessment, competitive analysis, or evaluating a product or business position.",
+          "rel_path": "skills/swot-analysis/SKILL.md"
+        },
+        {
+          "skill": "value-proposition",
+          "description": "Design a detailed value proposition using a 6-part JTBD template — Who, Why, What before, How, What after, Alternatives. Use when creating a value proposition, analyzing customer value delivery, or articulating why customers should choose your product.",
+          "rel_path": "skills/value-proposition/SKILL.md"
+        }
+      ]
+    },
+    {
+      "name": "pm-toolkit",
+      "role": "Product mgmt",
+      "upstream": "phuryn/pm-skills",
+      "attribution": "Pawel Huryn",
+      "license": "MIT",
+      "install": "claude plugin install pm-toolkit@zeev-playground",
+      "skill_count": 4,
+      "skills": [
+        {
+          "skill": "draft-nda",
+          "description": "Draft a detailed Non-Disclosure Agreement between two parties covering information types, jurisdiction, and clauses needing legal review. Use when creating confidentiality agreements or preparing an NDA for a partnership.",
+          "rel_path": "skills/draft-nda/SKILL.md"
+        },
+        {
+          "skill": "grammar-check",
+          "description": "Identify grammar, logical, and flow errors in text and suggest targeted fixes without rewriting the entire text. Use when proofreading content, checking writing quality, or reviewing a draft.",
+          "rel_path": "skills/grammar-check/SKILL.md"
+        },
+        {
+          "skill": "privacy-policy",
+          "description": "Draft a detailed privacy policy covering data types, jurisdiction, GDPR and compliance considerations, and clauses needing legal review. Use when creating a privacy policy, updating data protection documentation, or preparing for compliance.",
+          "rel_path": "skills/privacy-policy/SKILL.md"
+        },
+        {
+          "skill": "review-resume",
+          "description": "Comprehensive PM resume review and tailoring against 10 best practices including XYZ+S formula, keyword optimization, job-specific tailoring, and structure. Use when reviewing a PM resume, preparing for job applications, or improving resume impact.",
+          "rel_path": "skills/review-resume/SKILL.md"
+        }
+      ]
+    },
+    {
+      "name": "pm-execution",
+      "role": "Project mgmt",
+      "upstream": "phuryn/pm-skills",
+      "attribution": "Pawel Huryn",
+      "license": "MIT",
+      "install": "claude plugin install pm-execution@zeev-playground",
+      "skill_count": 16,
+      "skills": [
+        {
+          "skill": "brainstorm-okrs",
+          "description": "Brainstorm team-level OKRs aligned with company objectives — qualitative objectives with measurable key results. Use when setting quarterly OKRs, aligning team goals with company strategy, drafting objectives, or learning how to write effective OKRs.",
+          "rel_path": "skills/brainstorm-okrs/SKILL.md"
+        },
+        {
+          "skill": "create-prd",
+          "description": "Create a Product Requirements Document using a comprehensive 8-section template covering problem, objectives, segments, value propositions, solution, and release planning. Use when writing a PRD, documenting product requirements, preparing a feature spec, or reviewing an exist…",
+          "rel_path": "skills/create-prd/SKILL.md"
+        },
+        {
+          "skill": "dummy-dataset",
+          "description": "Generate realistic dummy datasets for testing with customizable columns, constraints, and output formats (CSV, JSON, SQL, Python script). Use when creating test data, building mock datasets, or generating sample data for development and demos.",
+          "rel_path": "skills/dummy-dataset/SKILL.md"
+        },
+        {
+          "skill": "job-stories",
+          "description": "Create job stories using the 'When [situation], I want to [motivation], so I can [outcome]' format with detailed acceptance criteria. Use when writing job stories, creating JTBD-style backlog items, or expressing user situations and motivations.",
+          "rel_path": "skills/job-stories/SKILL.md"
+        },
+        {
+          "skill": "outcome-roadmap",
+          "description": "Transform an output-focused roadmap into an outcome-focused one that communicates strategic intent. Rewrites initiatives as outcome statements reflecting user and business impacts. Use when shifting to outcome roadmaps, making a roadmap more strategic, or rewriting feature lis…",
+          "rel_path": "skills/outcome-roadmap/SKILL.md"
+        },
+        {
+          "skill": "pre-mortem",
+          "description": "Run a pre-mortem risk analysis on a PRD or launch plan. Categorizes risks as Tigers (real problems), Paper Tigers (overblown concerns), and Elephants (unspoken worries), then classifies as launch-blocking, fast-follow, or track. Use when preparing for launch, stress-testing a …",
+          "rel_path": "skills/pre-mortem/SKILL.md"
+        },
+        {
+          "skill": "prioritization-frameworks",
+          "description": "Reference guide to 9 prioritization frameworks with formulas, when-to-use guidance, and templates — RICE, ICE, Kano, MoSCoW, Opportunity Score, and more. Use when selecting a prioritization method, comparing frameworks like RICE vs ICE, or learning how different prioritization…",
+          "rel_path": "skills/prioritization-frameworks/SKILL.md"
+        },
+        {
+          "skill": "release-notes",
+          "description": "Generate user-facing release notes from tickets, PRDs, or changelogs. Creates clear, engaging summaries organized by category (new features, improvements, fixes). Use when writing release notes, creating changelogs, announcing product updates, or summarizing what shipped.",
+          "rel_path": "skills/release-notes/SKILL.md"
+        },
+        {
+          "skill": "retro",
+          "description": "Facilitate a structured sprint retrospective — what went well, what didn't, and prioritized action items with owners and deadlines. Use when running a retrospective, reflecting on a sprint, creating action items from team feedback, or learning how to run effective retros.",
+          "rel_path": "skills/retro/SKILL.md"
+        },
+        {
+          "skill": "sprint-plan",
+          "description": "Plan a sprint with capacity estimation, story selection, dependency mapping, and risk identification. Use when preparing for sprint planning, estimating team capacity, selecting stories, or balancing sprint scope against velocity.",
+          "rel_path": "skills/sprint-plan/SKILL.md"
+        },
+        {
+          "skill": "stakeholder-map",
+          "description": "Build a stakeholder map using a power/interest grid, identify communication strategies per quadrant, and generate a communication plan. Use when managing stakeholders, preparing for a launch, aligning cross-functional teams, or planning stakeholder engagement.",
+          "rel_path": "skills/stakeholder-map/SKILL.md"
+        },
+        {
+          "skill": "strategy-red-team",
+          "description": "Red-team a PRD, roadmap, or strategy by attacking its load-bearing assumptions before reality does. Steelmans then attacks each claim, ranks failure modes by impact × likelihood × cheapness-to-test, and returns the cheapest test and kill criteria for each. Use when stress-test…",
+          "rel_path": "skills/strategy-red-team/SKILL.md"
+        },
+        {
+          "skill": "summarize-meeting",
+          "description": "Summarize a meeting transcript into structured notes with date, participants, topic, key decisions, summary points, and action items. Use when processing meeting recordings, creating meeting notes, writing meeting minutes, or recapping discussions.",
+          "rel_path": "skills/summarize-meeting/SKILL.md"
+        },
+        {
+          "skill": "test-scenarios",
+          "description": "Create comprehensive test scenarios from user stories with test objectives, starting conditions, user roles, step-by-step actions, and expected outcomes. Use when writing QA test cases, creating test plans, defining acceptance tests, or preparing for feature validation.",
+          "rel_path": "skills/test-scenarios/SKILL.md"
+        },
+        {
+          "skill": "user-stories",
+          "description": "Create user stories following the 3 C's (Card, Conversation, Confirmation) and INVEST criteria with descriptions, design links, and acceptance criteria. Use when writing user stories, breaking down features into backlog items, or defining acceptance criteria.",
+          "rel_path": "skills/user-stories/SKILL.md"
+        },
+        {
+          "skill": "wwas",
+          "description": "Create product backlog items in Why-What-Acceptance format — independent, valuable, testable items with strategic context. Use when writing structured backlog items, breaking features into work items, or using the WWA format.",
+          "rel_path": "skills/wwas/SKILL.md"
+        }
+      ]
+    },
+    {
+      "name": "pm-market-research",
+      "role": "Product mgmt",
+      "upstream": "phuryn/pm-skills",
+      "attribution": "Pawel Huryn",
+      "license": "MIT",
+      "install": "claude plugin install pm-market-research@zeev-playground",
+      "skill_count": 7,
+      "skills": [
+        {
+          "skill": "competitor-analysis",
+          "description": "Analyze competitors with strengths, weaknesses, and differentiation opportunities. Identifies direct competitors and maps the competitive landscape. Use when doing competitive research, preparing a competitive brief, or finding differentiation opportunities.",
+          "rel_path": "skills/competitor-analysis/SKILL.md"
+        },
+        {
+          "skill": "customer-journey-map",
+          "description": "Create an end-to-end customer journey map with stages, touchpoints, emotions, pain points, and opportunities. Use when mapping the customer experience, identifying friction points, improving onboarding, or visualizing the user journey.",
+          "rel_path": "skills/customer-journey-map/SKILL.md"
+        },
+        {
+          "skill": "market-segments",
+          "description": "Identify 3-5 potential customer segments with demographics, JTBD, and product fit analysis. Use when exploring market segments, identifying target audiences, evaluating new markets, or learning how to segment a market.",
+          "rel_path": "skills/market-segments/SKILL.md"
+        },
+        {
+          "skill": "market-sizing",
+          "description": "Estimate market size using TAM, SAM, and SOM with top-down and bottom-up approaches. Use when sizing a market opportunity, estimating addressable market, preparing for investor pitches, or evaluating market entry.",
+          "rel_path": "skills/market-sizing/SKILL.md"
+        },
+        {
+          "skill": "sentiment-analysis",
+          "description": "Analyze user feedback data to identify segments with sentiment scores, JTBD, and product satisfaction insights. Use when analyzing user feedback at scale, running sentiment analysis on reviews or surveys, or identifying satisfaction patterns.",
+          "rel_path": "skills/sentiment-analysis/SKILL.md"
+        },
+        {
+          "skill": "user-personas",
+          "description": "Create refined user personas from research data — 3 personas with JTBD, pains, gains, and unexpected insights. Use when building personas from survey data, creating user profiles from research, or segmenting users for product decisions.",
+          "rel_path": "skills/user-personas/SKILL.md"
+        },
+        {
+          "skill": "user-segmentation",
+          "description": "Segment users from feedback data based on behavior, JTBD, and needs. Identifies at least 3 distinct user segments. Use when segmenting a user base, analyzing diverse user feedback, or building a segmentation model.",
+          "rel_path": "skills/user-segmentation/SKILL.md"
+        }
+      ]
+    },
+    {
+      "name": "pm-ai-shipping",
+      "role": "Product mgmt",
+      "upstream": "phuryn/pm-skills",
+      "attribution": "Pawel Huryn",
+      "license": "MIT",
+      "install": "claude plugin install pm-ai-shipping@zeev-playground",
+      "skill_count": 2,
+      "skills": [
+        {
+          "skill": "intended-vs-implemented",
+          "description": "The method for finding the gap between what a system is supposed to do and what the code actually does — the class of bug generic scanners miss because they have no model of intent. Defines what counts as documented intent, what counts as implementation evidence, which mismatc…",
+          "rel_path": "skills/intended-vs-implemented/SKILL.md"
+        },
+        {
+          "skill": "shipping-artifacts",
+          "description": "The durable documentation set that makes an AI-built (vibe-coded) app reviewable before shipping. A small core every app needs — architecture, user/permission flows, permissions, variables/secrets, and a test-coverage map — plus conditional docs added only when they apply: ema…",
+          "rel_path": "skills/shipping-artifacts/SKILL.md"
+        }
+      ]
+    },
+    {
+      "name": "pm-data-analytics",
+      "role": "Product mgmt",
+      "upstream": "phuryn/pm-skills",
+      "attribution": "Pawel Huryn",
+      "license": "MIT",
+      "install": "claude plugin install pm-data-analytics@zeev-playground",
+      "skill_count": 3,
+      "skills": [
+        {
+          "skill": "ab-test-analysis",
+          "description": "Analyze A/B test results with statistical significance, sample size validation, confidence intervals, and ship/extend/stop recommendations. Use when evaluating experiment results, checking if a test reached significance, interpreting split test data, or deciding whether to shi…",
+          "rel_path": "skills/ab-test-analysis/SKILL.md"
+        },
+        {
+          "skill": "cohort-analysis",
+          "description": "Perform cohort analysis on user engagement data — retention curves, feature adoption trends, and segment-level insights. Use when analyzing user retention by cohort, studying feature adoption over time, investigating churn patterns, or identifying engagement trends.",
+          "rel_path": "skills/cohort-analysis/SKILL.md"
+        },
+        {
+          "skill": "sql-queries",
+          "description": "Generate SQL queries from natural language descriptions. Supports BigQuery, PostgreSQL, MySQL, and other dialects. Reads database schemas from uploaded diagrams or documentation. Use when writing SQL, building data reports, exploring databases, or translating business question…",
+          "rel_path": "skills/sql-queries/SKILL.md"
+        }
+      ]
+    },
+    {
+      "name": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "upstream": "coreyhaines31/marketingskills",
+      "attribution": "Corey Haines",
+      "license": "MIT",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "skill_count": 44,
+      "skills": [
+        {
+          "skill": "ab-testing",
+          "description": "When the user wants to plan, design, or implement an A/B test or experiment, or build a growth experimentation program. Also use when the user mentions \"A/B test,\" \"split test,\" \"experiment,\" \"test this change,\" \"variant copy,\" \"multivariate test,\" \"hypothesis,\" \"should I test…",
+          "rel_path": "skills/ab-testing/SKILL.md"
+        },
+        {
+          "skill": "ad-creative",
+          "description": "When the user wants to generate, iterate, or scale ad creative — headlines, descriptions, primary text, or full ad variations — for any paid advertising platform. Also use when the user mentions 'ad copy variations,' 'ad creative,' 'generate headlines,' 'RSA headlines,' 'bulk …",
+          "rel_path": "skills/ad-creative/SKILL.md"
+        },
+        {
+          "skill": "ads",
+          "description": "When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also use when the user mentions 'PPC,' 'paid media,' 'ROAS,' 'CPA,' 'ad campaign,' 'retargeting,' 'audience targeting,' 'Google Ads,' …",
+          "rel_path": "skills/ads/SKILL.md"
+        },
+        {
+          "skill": "ai-seo",
+          "description": "When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Also use when the user mentions 'AI SEO,' 'AEO,' 'GEO,' 'LLMO,' 'answer engine optimization,' 'generative engine optimization,' 'LLM optimization,' 'AI Overview…",
+          "rel_path": "skills/ai-seo/SKILL.md"
+        },
+        {
+          "skill": "analytics",
+          "description": "When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions \"set up tracking,\" \"GA4,\" \"Google Analytics,\" \"conversion tracking,\" \"event tracking,\" \"UTM parameters,\" \"tag manager,\" \"GTM,\" \"analytics implementation,\" \"trac…",
+          "rel_path": "skills/analytics/SKILL.md"
+        },
+        {
+          "skill": "aso",
+          "description": "When the user wants to audit or optimize an App Store or Google Play listing. Also use when the user mentions 'ASO audit,' 'app store optimization,' 'optimize my app listing,' 'improve app visibility,' 'app store ranking,' 'audit my listing,' 'why aren't people downloading my …",
+          "rel_path": "skills/aso/SKILL.md"
+        },
+        {
+          "skill": "churn-prevention",
+          "description": "When the user wants to reduce churn, build cancellation flows, set up save offers, recover failed payments, or implement retention strategies. Also use when the user mentions 'churn,' 'cancel flow,' 'offboarding,' 'save offer,' 'dunning,' 'failed payment recovery,' 'win-back,'…",
+          "rel_path": "skills/churn-prevention/SKILL.md"
+        },
+        {
+          "skill": "co-marketing",
+          "description": "When the user wants to find co-marketing partners, plan joint campaigns, or brainstorm partnership opportunities. Use when the user says 'co-marketing,' 'partner marketing,' 'joint campaign,' 'who should we partner with,' 'integration marketing,' 'cross-promotion,' 'collaborat…",
+          "rel_path": "skills/co-marketing/SKILL.md"
+        },
+        {
+          "skill": "cold-email",
+          "description": "Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails, prospecting emails, cold email campaigns, sales development emails, or SDR emails. Also use when the user mentions \"cold outreach,\" \"prospecting email,\" \"outb…",
+          "rel_path": "skills/cold-email/SKILL.md"
+        },
+        {
+          "skill": "community-marketing",
+          "description": "Build and leverage online communities to drive product growth and brand loyalty. Use when the user wants to create a community strategy, grow a Discord or Slack community, manage a forum or subreddit, build brand advocates, increase word-of-mouth, drive community-led growth, e…",
+          "rel_path": "skills/community-marketing/SKILL.md"
+        },
+        {
+          "skill": "competitor-profiling",
+          "description": "When the user wants to research, profile, or analyze competitors from their URLs. Also use when the user mentions 'competitor profile,' 'competitor research,' 'competitor analysis,' 'profile this competitor,' 'analyze competitor,' 'competitive intelligence,' 'competitor deep d…",
+          "rel_path": "skills/competitor-profiling/SKILL.md"
+        },
+        {
+          "skill": "competitors",
+          "description": "When the user wants to create competitor comparison or alternative pages for SEO and sales enablement. Also use when the user mentions 'alternative page,' 'vs page,' 'competitor comparison,' 'comparison page,' '[Product] vs [Product],' '[Product] alternative,' 'competitive lan…",
+          "rel_path": "skills/competitors/SKILL.md"
+        },
+        {
+          "skill": "content-strategy",
+          "description": "When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions \"content strategy,\" \"what should I write about,\" \"content ideas,\" \"blog strategy,\" \"topic clusters,\" \"content planning,\" \"editoria…",
+          "rel_path": "skills/content-strategy/SKILL.md"
+        },
+        {
+          "skill": "copy-editing",
+          "description": "When the user wants to edit, review, or improve existing marketing copy, or refresh outdated content. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 'polish this,' 'make this better,' 'copy sweep,' 'tighten this up,' 'this rea…",
+          "rel_path": "skills/copy-editing/SKILL.md"
+        },
+        {
+          "skill": "copywriting",
+          "description": "When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says \"write copy for,\" \"improve this copy,\" \"rewrite this page,\" \"marketing co…",
+          "rel_path": "skills/copywriting/SKILL.md"
+        },
+        {
+          "skill": "cro",
+          "description": "When the user wants to optimize, improve, or increase conversions on any marketing page or form — including homepage, landing pages, pricing pages, feature pages, lead capture forms, or contact forms. Also use when the user says 'CRO,' 'conversion rate optimization,' 'this pag…",
+          "rel_path": "skills/cro/SKILL.md"
+        },
+        {
+          "skill": "customer-research",
+          "description": "When the user wants to conduct, analyze, or synthesize customer research. Use when the user mentions \"customer research,\" \"ICP research,\" \"talk to customers,\" \"analyze transcripts,\" \"customer interviews,\" \"survey analysis,\" \"support ticket analysis,\" \"voice of customer,\" \"VOC,…",
+          "rel_path": "skills/customer-research/SKILL.md"
+        },
+        {
+          "skill": "directory-submissions",
+          "description": "When the user wants to submit their product to startup, SaaS, AI, agent, MCP, no-code, or review directories for backlinks, domain rating, and discovery. Also use when the user mentions \"directory submissions,\" \"submit to directories,\" \"backlinks from directories,\" \"list my pr…",
+          "rel_path": "skills/directory-submissions/SKILL.md"
+        },
+        {
+          "skill": "emails",
+          "description": "When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use when the user mentions \"email sequence,\" \"drip campaign,\" \"nurture sequence,\" \"onboarding emails,\" \"welcome sequence,\" \"re-engagement emails,\"…",
+          "rel_path": "skills/emails/SKILL.md"
+        },
+        {
+          "skill": "free-tools",
+          "description": "When the user wants to plan, evaluate, or build a free tool for marketing purposes — lead generation, SEO value, or brand awareness. Also use when the user mentions \"engineering as marketing,\" \"free tool,\" \"marketing tool,\" \"calculator,\" \"generator,\" \"interactive tool,\" \"lead …",
+          "rel_path": "skills/free-tools/SKILL.md"
+        },
+        {
+          "skill": "image",
+          "description": "When the user wants to create, generate, edit, or optimize images for marketing — blog heroes, social graphics, product mockups, profile banners, listing visuals, or brand assets. Also use when the user mentions 'AI image generation,' 'generate an image,' 'create a graphic,' '…",
+          "rel_path": "skills/image/SKILL.md"
+        },
+        {
+          "skill": "launch",
+          "description": "When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user mentions 'launch,' 'Product Hunt,' 'feature release,' 'announcement,' 'go-to-market,' 'beta launch,' 'early access,' 'waitlist,' 'product update,' 'how do I launch t…",
+          "rel_path": "skills/launch/SKILL.md"
+        },
+        {
+          "skill": "lead-magnets",
+          "description": "When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. Also use when the user mentions \"lead magnet,\" \"gated content,\" \"content upgrade,\" \"downloadable,\" \"ebook,\" \"cheat sheet,\" \"checklist,\" \"template download,\" \"opt-in,\" \"freebie,…",
+          "rel_path": "skills/lead-magnets/SKILL.md"
+        },
+        {
+          "skill": "marketing-ideas",
+          "description": "When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product. Also use when the user asks for 'marketing ideas,' 'growth ideas,' 'how to market,' 'marketing strategies,' 'marketing tactics,' 'ways to promote,' 'ideas to grow,' 'what else c…",
+          "rel_path": "skills/marketing-ideas/SKILL.md"
+        },
+        {
+          "skill": "marketing-plan",
+          "description": "When the user needs a comprehensive marketing plan for a client, a company they advise, or their own product. Also use when the user mentions \"marketing plan,\" \"growth plan,\" \"GTM plan,\" \"go-to-market plan,\" \"AARRR plan,\" \"90-day marketing plan,\" \"12-month marketing roadmap,\" …",
+          "rel_path": "skills/marketing-plan/SKILL.md"
+        },
+        {
+          "skill": "marketing-psychology",
+          "description": "When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral science,' 'why people buy,' 'decision-making,' 'consumer behavio…",
+          "rel_path": "skills/marketing-psychology/SKILL.md"
+        },
+        {
+          "skill": "onboarding",
+          "description": "When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value. Also use when the user mentions \"onboarding flow,\" \"activation rate,\" \"user activation,\" \"first-run experience,\" \"empty states,\" \"onboarding checklist,\" \"aha moment…",
+          "rel_path": "skills/onboarding/SKILL.md"
+        },
+        {
+          "skill": "paywalls",
+          "description": "When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates. Also use when the user mentions \"paywall,\" \"upgrade screen,\" \"upgrade modal,\" \"upsell,\" \"feature gate,\" \"convert free to paid,\" \"freemium conversion,\" \"trial expiration…",
+          "rel_path": "skills/paywalls/SKILL.md"
+        },
+        {
+          "skill": "popups",
+          "description": "When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also use when the user mentions \"exit intent,\" \"popup conversions,\" \"modal optimization,\" \"lead capture popup,\" \"email popup,\" \"announcement banner,\" \"overlay,\" \"…",
+          "rel_path": "skills/popups/SKILL.md"
+        },
+        {
+          "skill": "pricing",
+          "description": "When the user wants help with pricing decisions, packaging, or monetization strategy. Also use when the user mentions 'pricing,' 'pricing tiers,' 'freemium,' 'free trial,' 'packaging,' 'price increase,' 'value metric,' 'Van Westendorp,' 'willingness to pay,' 'monetization,' 'h…",
+          "rel_path": "skills/pricing/SKILL.md"
+        },
+        {
+          "skill": "product-marketing",
+          "description": "When the user wants to create or update their product marketing context document. Also use when the user mentions 'product context,' 'marketing context,' 'set up context,' 'positioning,' 'who is my target audience,' 'describe my product,' 'ICP,' 'ideal customer profile,' or wa…",
+          "rel_path": "skills/product-marketing/SKILL.md"
+        },
+        {
+          "skill": "programmatic-seo",
+          "description": "When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions \"programmatic SEO,\" \"template pages,\" \"pages at scale,\" \"directory pages,\" \"location pages,\" \"[keyword] + [city] pages,\" \"comparison pages,\" \"integration pages,\" \"…",
+          "rel_path": "skills/programmatic-seo/SKILL.md"
+        },
+        {
+          "skill": "prospecting",
+          "description": "When the user wants to find, qualify, and build a list of prospects to reach out to — across B2B SaaS, general B2B, or local small businesses. Also use when the user mentions \"prospecting,\" \"build a prospect list,\" \"find prospects,\" \"find leads,\" \"lead gen list,\" \"find SaaS co…",
+          "rel_path": "skills/prospecting/SKILL.md"
+        },
+        {
+          "skill": "public-relations",
+          "description": "When the user wants help with public relations, earned media, press coverage, journalist outreach, or media strategy (not pull requests). Also use when the user mentions 'PR,' 'public relations,' 'press,' 'press release,' 'press coverage,' 'media outreach,' 'pitch a journalist…",
+          "rel_path": "skills/public-relations/SKILL.md"
+        },
+        {
+          "skill": "referrals",
+          "description": "When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy. Also use when the user mentions 'referral,' 'affiliate,' 'ambassador,' 'word of mouth,' 'viral loop,' 'refer a friend,' 'partner program,' 'referral incentive,…",
+          "rel_path": "skills/referrals/SKILL.md"
+        },
+        {
+          "skill": "revops",
+          "description": "When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes. Also use when the user mentions 'RevOps,' 'revenue operations,' 'lead scoring,' 'lead routing,' 'MQL,' 'SQL,' 'pipeline stages,' 'deal desk,' 'CRM automation,'…",
+          "rel_path": "skills/revops/SKILL.md"
+        },
+        {
+          "skill": "sales-enablement",
+          "description": "When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also use when the user mentions 'sales deck,' 'pitch deck,' 'one-pager,' 'leave-behind,' 'objection handling,' 'deal-specific ROI analysis,' 'demo script,' 'talk …",
+          "rel_path": "skills/sales-enablement/SKILL.md"
+        },
+        {
+          "skill": "schema",
+          "description": "When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user mentions \"schema markup,\" \"structured data,\" \"JSON-LD,\" \"rich snippets,\" \"schema.org,\" \"FAQ schema,\" \"product schema,\" \"review schema,\" \"breadcrumb schema,\" \"Go…",
+          "rel_path": "skills/schema/SKILL.md"
+        },
+        {
+          "skill": "seo-audit",
+          "description": "When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions \"SEO audit,\" \"technical SEO,\" \"why am I not ranking,\" \"SEO issues,\" \"on-page SEO,\" \"meta tags review,\" \"SEO health check,\" \"my traffic dropped,\" \"lost rankings,\" \"not sh…",
+          "rel_path": "skills/seo-audit/SKILL.md"
+        },
+        {
+          "skill": "signup",
+          "description": "When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the user mentions \"signup conversions,\" \"registration friction,\" \"signup form optimization,\" \"free trial signup,\" \"reduce signup dropoff,\" \"account creation flow,\" …",
+          "rel_path": "skills/signup/SKILL.md"
+        },
+        {
+          "skill": "site-architecture",
+          "description": "When the user wants to plan, map, or restructure their website's page hierarchy, navigation, URL structure, or internal linking. Also use when the user mentions \"sitemap,\" \"site map,\" \"visual sitemap,\" \"site structure,\" \"page hierarchy,\" \"information architecture,\" \"IA,\" \"navi…",
+          "rel_path": "skills/site-architecture/SKILL.md"
+        },
+        {
+          "skill": "sms",
+          "description": "When the user wants to plan, build, or optimize SMS or MMS marketing — including welcome flows, abandoned cart texts, post-purchase, win-back, promotional sends, or transactional/auth SMS. Also use when the user mentions \"SMS marketing,\" \"text message campaigns,\" \"SMS sequence…",
+          "rel_path": "skills/sms/SKILL.md"
+        },
+        {
+          "skill": "social",
+          "description": "When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, Facebook, or other platforms, or wants to do social listening and engagement triage. Also use when the user mentions 'LinkedIn post,' 'Twitter thread,'…",
+          "rel_path": "skills/social/SKILL.md"
+        },
+        {
+          "skill": "video",
+          "description": "When the user wants to create, generate, or produce video content using AI tools or programmatic frameworks. Also use when the user mentions 'video production,' 'AI video,' 'Remotion,' 'Hyperframes,' 'HeyGen,' 'Synthesia,' 'Veo,' 'Sora,' 'Runway,' 'Kling,' 'Seedance,' 'Hailuo,…",
+          "rel_path": "skills/video/SKILL.md"
+        }
+      ]
+    },
+    {
+      "name": "x",
+      "role": "Utilities",
+      "upstream": "omriariav/omri-cc-stuff",
+      "attribution": "Omri Ariav",
+      "license": "MIT",
+      "install": "claude plugin install x@zeev-playground",
+      "skill_count": 2,
+      "skills": [
+        {
+          "skill": "read",
+          "description": "Read a tweet from X (Twitter) by URL or ID and load it into the conversation. Use when user says \"/x:read <url>\", \"read this tweet\", \"what does this tweet say\", or pastes an x.com / twitter.com status link and wants to discuss, summarize, or reply to it. NOT for posting (use /…",
+          "rel_path": "skills/read/SKILL.md"
+        },
+        {
+          "skill": "tweet",
+          "description": "Post tweets to X (Twitter) from Claude Code. Supports single tweets, threads (auto-split or manual), and replies. Use when user says \"/x:tweet\", \"post a tweet\", \"tweet this\", \"post a thread\", \"reply to this tweet\". NOT for reading tweets, analytics, scheduling, or DMs.",
+          "rel_path": "skills/tweet/SKILL.md"
+        }
+      ]
+    },
+    {
+      "name": "gdoc-math",
+      "role": "Utilities",
+      "upstream": "omriariav/omri-cc-stuff",
+      "attribution": "Omri Ariav",
+      "license": "MIT",
+      "install": "claude plugin install gdoc-math@zeev-playground",
+      "skill_count": 1,
+      "skills": [
+        {
+          "skill": "gdoc-math",
+          "description": "Convert Markdown with LaTeX math into a native Google Doc whose equations are real, editable equation objects (not images, not literal $$ text). Use when: \"/gdoc-math\", \"turn this markdown into a Google Doc with editable equations\", \"convert this LaTeX/formulas to a Google Doc…",
+          "rel_path": "skills/gdoc-math/SKILL.md"
+        }
+      ]
+    },
+    {
+      "name": "find-session",
+      "role": "Utilities",
+      "upstream": "omriariav/omri-cc-stuff",
+      "attribution": "Omri Ariav",
+      "license": "MIT",
+      "install": "claude plugin install find-session@zeev-playground",
+      "skill_count": 1,
+      "skills": [
+        {
+          "skill": "find-session",
+          "description": "Search past Claude Code conversations by keyword and return session IDs for resuming. Use when the user asks to find, locate, or look for a past/previous conversation, or needs a session ID to resume a conversation with claude --resume. NOT for searching within a conversation …",
+          "rel_path": "skills/find-session/SKILL.md"
+        }
+      ]
+    },
+    {
+      "name": "setup-pulse",
+      "role": "Utilities",
+      "upstream": "omriariav/omri-cc-stuff",
+      "attribution": "Omri Ariav",
+      "license": "MIT",
+      "install": "claude plugin install setup-pulse@zeev-playground",
+      "skill_count": 1,
+      "skills": [
+        {
+          "skill": "setup-pulse",
+          "description": "Install claude-pulse statusline for real-time token usage monitoring. Use when user says \"/setup-pulse\", \"install statusline\", \"setup pulse\".",
+          "rel_path": "skills/setup-pulse/SKILL.md"
+        }
+      ]
+    },
+    {
+      "name": "claude-reviewer",
+      "role": "Utilities",
+      "upstream": "omriariav/omri-cc-stuff",
+      "attribution": "Omri Ariav",
+      "license": "MIT",
+      "install": "claude plugin install claude-reviewer@zeev-playground",
+      "skill_count": 1,
+      "skills": [
+        {
+          "skill": "claude-reviewer",
+          "description": "Review any project's .claude/ setup against Claude Code best practices and produce an actionable improvement report. Use when: \"/claude-reviewer\", \"review my claude config\", \"audit .claude setup\", \"check my CLAUDE.md\", \"how good is my claude config\", \"rate this project's claud…",
+          "rel_path": "skills/claude-reviewer/SKILL.md"
+        }
+      ]
+    },
+    {
+      "name": "skill-reviewer",
+      "role": "Utilities",
+      "upstream": "omriariav/omri-cc-stuff",
+      "attribution": "Omri Ariav",
+      "license": "MIT",
+      "install": "claude plugin install skill-reviewer@zeev-playground",
+      "skill_count": 1,
+      "skills": [
+        {
+          "skill": "skill-reviewer",
+          "description": "Evaluate any skill's design quality against best practices and flag anti-patterns. Use when: \"/skill-reviewer\", \"review this skill\", \"evaluate skill quality\", \"audit skill\", \"how good is this skill\", \"rate this skill\". NOT for: conversation-level reflection (use /reflect), cod…",
+          "rel_path": "skills/skill-reviewer/SKILL.md"
+        }
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "skill": "api-and-interface-design",
+      "description": "Guides stable API and interface design. Use when designing APIs, module boundaries, or any public interface. Use when creating REST or GraphQL endpoints, defining type contracts between modules, or establishing boundaries between frontend and backend.",
+      "plugin": "agent-skills",
+      "role": "Software dev",
+      "install": "claude plugin install agent-skills@zeev-playground",
+      "upstream": "addyosmani/agent-skills",
+      "source_repo": "Zeev-L/addyosmani-agent-skills"
+    },
+    {
+      "skill": "browser-testing-with-devtools",
+      "description": "Tests in real browsers via Chrome DevTools MCP. Use when building or debugging anything that runs in a browser. Use when you need to inspect the DOM, capture console errors, analyze network requests, profile performance, or verify visual output with real runtime data. Requires…",
+      "plugin": "agent-skills",
+      "role": "Software dev",
+      "install": "claude plugin install agent-skills@zeev-playground",
+      "upstream": "addyosmani/agent-skills",
+      "source_repo": "Zeev-L/addyosmani-agent-skills"
+    },
+    {
+      "skill": "ci-cd-and-automation",
+      "description": "Automates CI/CD pipeline setup. Use when setting up or modifying build and deployment pipelines. Use when you need to automate quality gates, configure test runners in CI, or establish deployment strategies.",
+      "plugin": "agent-skills",
+      "role": "Software dev",
+      "install": "claude plugin install agent-skills@zeev-playground",
+      "upstream": "addyosmani/agent-skills",
+      "source_repo": "Zeev-L/addyosmani-agent-skills"
+    },
+    {
+      "skill": "code-review-and-quality",
+      "description": "Conducts multi-axis code review. Use before merging any change. Use when reviewing code written by yourself, another agent, or a human. Use when you need to assess code quality across multiple dimensions before it enters the main branch.",
+      "plugin": "agent-skills",
+      "role": "Software dev",
+      "install": "claude plugin install agent-skills@zeev-playground",
+      "upstream": "addyosmani/agent-skills",
+      "source_repo": "Zeev-L/addyosmani-agent-skills"
+    },
+    {
+      "skill": "code-simplification",
+      "description": "Simplifies code for clarity. Use when refactoring code for clarity without changing behavior. Use when code works but is harder to read, maintain, or extend than it should be. Use when reviewing code that has accumulated unnecessary complexity.",
+      "plugin": "agent-skills",
+      "role": "Software dev",
+      "install": "claude plugin install agent-skills@zeev-playground",
+      "upstream": "addyosmani/agent-skills",
+      "source_repo": "Zeev-L/addyosmani-agent-skills"
+    },
+    {
+      "skill": "context-engineering",
+      "description": "Optimizes agent context setup. Use when starting a new session, when agent output quality degrades, when switching between tasks, or when you need to configure rules files and context for a project.",
+      "plugin": "agent-skills",
+      "role": "Software dev",
+      "install": "claude plugin install agent-skills@zeev-playground",
+      "upstream": "addyosmani/agent-skills",
+      "source_repo": "Zeev-L/addyosmani-agent-skills"
+    },
+    {
+      "skill": "debugging-and-error-recovery",
+      "description": "Guides systematic root-cause debugging. Use when tests fail, builds break, behavior doesn't match expectations, or you encounter any unexpected error. Use when you need a systematic approach to finding and fixing the root cause rather than guessing.",
+      "plugin": "agent-skills",
+      "role": "Software dev",
+      "install": "claude plugin install agent-skills@zeev-playground",
+      "upstream": "addyosmani/agent-skills",
+      "source_repo": "Zeev-L/addyosmani-agent-skills"
+    },
+    {
+      "skill": "deprecation-and-migration",
+      "description": "Manages deprecation and migration. Use when removing old systems, APIs, or features. Use when migrating users from one implementation to another. Use when deciding whether to maintain or sunset existing code.",
+      "plugin": "agent-skills",
+      "role": "Software dev",
+      "install": "claude plugin install agent-skills@zeev-playground",
+      "upstream": "addyosmani/agent-skills",
+      "source_repo": "Zeev-L/addyosmani-agent-skills"
+    },
+    {
+      "skill": "documentation-and-adrs",
+      "description": "Records decisions and documentation. Use when making architectural decisions, changing public APIs, shipping features, or when you need to record context that future engineers and agents will need to understand the codebase.",
+      "plugin": "agent-skills",
+      "role": "Software dev",
+      "install": "claude plugin install agent-skills@zeev-playground",
+      "upstream": "addyosmani/agent-skills",
+      "source_repo": "Zeev-L/addyosmani-agent-skills"
+    },
+    {
+      "skill": "doubt-driven-development",
+      "description": "Subjects every non-trivial decision to a fresh-context adversarial review before it stands. Use when correctness matters more than speed, when working in unfamiliar code, when stakes are high (production, security-sensitive logic, irreversible operations), or any time a confid…",
+      "plugin": "agent-skills",
+      "role": "Software dev",
+      "install": "claude plugin install agent-skills@zeev-playground",
+      "upstream": "addyosmani/agent-skills",
+      "source_repo": "Zeev-L/addyosmani-agent-skills"
+    },
+    {
+      "skill": "frontend-ui-engineering",
+      "description": "Builds production-quality UIs. Use when building or modifying user-facing interfaces. Use when creating components, implementing layouts, managing state, or when the output needs to look and feel production-quality rather than AI-generated.",
+      "plugin": "agent-skills",
+      "role": "Software dev",
+      "install": "claude plugin install agent-skills@zeev-playground",
+      "upstream": "addyosmani/agent-skills",
+      "source_repo": "Zeev-L/addyosmani-agent-skills"
+    },
+    {
+      "skill": "git-workflow-and-versioning",
+      "description": "Structures git workflow practices. Use when making any code change. Use when committing, branching, resolving conflicts, or when you need to organize work across multiple parallel streams.",
+      "plugin": "agent-skills",
+      "role": "Software dev",
+      "install": "claude plugin install agent-skills@zeev-playground",
+      "upstream": "addyosmani/agent-skills",
+      "source_repo": "Zeev-L/addyosmani-agent-skills"
+    },
+    {
+      "skill": "idea-refine",
+      "description": "Refines raw ideas into sharp, actionable concepts through structured divergent and convergent thinking. Use when an idea is still vague, when you need to stress-test assumptions before committing to a plan, or when you want to expand options before converging on one. Triggers …",
+      "plugin": "agent-skills",
+      "role": "Software dev",
+      "install": "claude plugin install agent-skills@zeev-playground",
+      "upstream": "addyosmani/agent-skills",
+      "source_repo": "Zeev-L/addyosmani-agent-skills"
+    },
+    {
+      "skill": "incremental-implementation",
+      "description": "Delivers changes incrementally. Use when implementing any feature or change that touches more than one file. Use when you're about to write a large amount of code at once, or when a task feels too big to land in one step.",
+      "plugin": "agent-skills",
+      "role": "Software dev",
+      "install": "claude plugin install agent-skills@zeev-playground",
+      "upstream": "addyosmani/agent-skills",
+      "source_repo": "Zeev-L/addyosmani-agent-skills"
+    },
+    {
+      "skill": "interview-me",
+      "description": "Extracts what the user actually wants instead of what they think they should want. Achieves this through one-question-at-a-time interview until ~95% confidence about the underlying intent. Use when an ask is underspecified (\"build me X\" without \"for whom\" or \"why now\"), when t…",
+      "plugin": "agent-skills",
+      "role": "Software dev",
+      "install": "claude plugin install agent-skills@zeev-playground",
+      "upstream": "addyosmani/agent-skills",
+      "source_repo": "Zeev-L/addyosmani-agent-skills"
+    },
+    {
+      "skill": "observability-and-instrumentation",
+      "description": "Instruments code so production behavior is visible and diagnosable. Use when adding logging, metrics, tracing, or alerting. Use when shipping any feature that runs in production and you need evidence it works. Use when production issues are reported but you can't tell what hap…",
+      "plugin": "agent-skills",
+      "role": "Software dev",
+      "install": "claude plugin install agent-skills@zeev-playground",
+      "upstream": "addyosmani/agent-skills",
+      "source_repo": "Zeev-L/addyosmani-agent-skills"
+    },
+    {
+      "skill": "performance-optimization",
+      "description": "Optimizes application performance. Use when performance requirements exist, when you suspect performance regressions, or when Core Web Vitals or load times need improvement. Use when profiling reveals bottlenecks that need fixing.",
+      "plugin": "agent-skills",
+      "role": "Software dev",
+      "install": "claude plugin install agent-skills@zeev-playground",
+      "upstream": "addyosmani/agent-skills",
+      "source_repo": "Zeev-L/addyosmani-agent-skills"
+    },
+    {
+      "skill": "planning-and-task-breakdown",
+      "description": "Breaks work into ordered tasks. Use when you have a spec or clear requirements and need to break work into implementable tasks. Use when a task feels too large to start, when you need to estimate scope, or when parallel work is possible.",
+      "plugin": "agent-skills",
+      "role": "Software dev",
+      "install": "claude plugin install agent-skills@zeev-playground",
+      "upstream": "addyosmani/agent-skills",
+      "source_repo": "Zeev-L/addyosmani-agent-skills"
+    },
+    {
+      "skill": "security-and-hardening",
+      "description": "Hardens code against vulnerabilities. Use when handling user input, authentication, data storage, or external integrations. Use when building any feature that accepts untrusted data, manages user sessions, or interacts with third-party services.",
+      "plugin": "agent-skills",
+      "role": "Software dev",
+      "install": "claude plugin install agent-skills@zeev-playground",
+      "upstream": "addyosmani/agent-skills",
+      "source_repo": "Zeev-L/addyosmani-agent-skills"
+    },
+    {
+      "skill": "shipping-and-launch",
+      "description": "Prepares production launches. Use when preparing to deploy to production. Use when you need a pre-launch checklist, when setting up monitoring, when planning a staged rollout, or when you need a rollback strategy.",
+      "plugin": "agent-skills",
+      "role": "Software dev",
+      "install": "claude plugin install agent-skills@zeev-playground",
+      "upstream": "addyosmani/agent-skills",
+      "source_repo": "Zeev-L/addyosmani-agent-skills"
+    },
+    {
+      "skill": "source-driven-development",
+      "description": "Grounds every implementation decision in official documentation. Use when you want authoritative, source-cited code free from outdated patterns. Use when building with any framework or library where correctness matters.",
+      "plugin": "agent-skills",
+      "role": "Software dev",
+      "install": "claude plugin install agent-skills@zeev-playground",
+      "upstream": "addyosmani/agent-skills",
+      "source_repo": "Zeev-L/addyosmani-agent-skills"
+    },
+    {
+      "skill": "spec-driven-development",
+      "description": "Creates specs before coding. Use when starting a new project, feature, or significant change and no specification exists yet. Use when requirements are unclear, ambiguous, or only exist as a vague idea.",
+      "plugin": "agent-skills",
+      "role": "Software dev",
+      "install": "claude plugin install agent-skills@zeev-playground",
+      "upstream": "addyosmani/agent-skills",
+      "source_repo": "Zeev-L/addyosmani-agent-skills"
+    },
+    {
+      "skill": "test-driven-development",
+      "description": "Drives development with tests. Use when implementing any logic, fixing any bug, or changing any behavior. Use when you need to prove that code works, when a bug report arrives, or when you're about to modify existing functionality.",
+      "plugin": "agent-skills",
+      "role": "Software dev",
+      "install": "claude plugin install agent-skills@zeev-playground",
+      "upstream": "addyosmani/agent-skills",
+      "source_repo": "Zeev-L/addyosmani-agent-skills"
+    },
+    {
+      "skill": "using-agent-skills",
+      "description": "Discovers and invokes agent skills. Use when starting a session or when you need to discover which skill applies to the current task. This is the meta-skill that governs how all other skills are discovered and invoked.",
+      "plugin": "agent-skills",
+      "role": "Software dev",
+      "install": "claude plugin install agent-skills@zeev-playground",
+      "upstream": "addyosmani/agent-skills",
+      "source_repo": "Zeev-L/addyosmani-agent-skills"
+    },
+    {
+      "skill": "ai-product-patterns",
+      "description": "Builds AI-native products using OpenAI's development philosophy and modern AI UX patterns. Use when integrating AI features, designing for model improvements, implementing evals as product specs, or creating AI-first experiences. Based on Kevin Weil (OpenAI CPO) on building fo…",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "ai-startup-building",
+      "description": "Builds AI-native products using Dan Shipper's 5-product playbook and Brandon Chu's AI product frameworks. Use when implementing prompt engineering, creating AI-native UX, scaling AI products, or optimizing costs. Focuses on 2025+ best practices.",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "career-growth",
+      "description": "Plans PM career growth using frameworks from 40+ career episodes and Ami Vora's advancement strategies. Use when planning promotions, identifying skill gaps, navigating career transitions, or choosing between IC and management paths.",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "confident-speaking",
+      "description": "Structures presentations and verbal pitches using Matt Abrahams' WHAT-SO WHAT-NOW WHAT framework and impromptu speaking techniques. Use when preparing presentations, creating talking points, or practicing difficult conversations.",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "continuous-discovery",
+      "description": "Implements Teresa Torres' continuous discovery habits for weekly customer contact, opportunity solution trees, and assumption testing. Use when building discovery processes, conducting user research, validating assumptions, or establishing product trio workflows.",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "culture-craft",
+      "description": "Designs team culture and sets standards of excellence using David Singleton (Stripe) and Dharmesh Shah (HubSpot) frameworks. Use when building teams, setting cultural values, creating rituals, or establishing excellence standards.",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "decision-frameworks",
+      "description": "Structures difficult decisions using Annie Duke's probabilistic thinking and Ben Horowitz's hard decisions frameworks. Use when facing tough choices, applying expected value thinking, or reducing decision paralysis with regret minimization and pre-mortems.",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "design-first-dev",
+      "description": "Follows Airbnb's design-led development and Figma's craft quality standards. Use when building user-facing features, making UI/UX decisions, determining when details matter, or applying design system thinking. Guides when to move fast vs when quality creates moats. Based on Br…",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "exec-comms",
+      "description": "Drafts executive memos and stakeholder communications using Amazon's 6-pager structure, Stripe's memo format, and SCQA framework. Use when writing board updates, executive summaries, or strategic documents.",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "exp-driven-dev",
+      "description": "Builds features with A/B testing in mind using Ronny Kohavi's frameworks and Netflix/Airbnb experimentation culture. Use when implementing feature flags, choosing metrics, designing experiments, or building for fast iteration. Focuses on guardrail metrics, statistical signific…",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "growth-embedded",
+      "description": "Builds growth loops into products from day 1 using YC playbook (Gustaf Alstromer), Casey Winters growth frameworks, and Elena Verna's retention-first approach. Use when adding viral mechanics, instrumenting analytics, creating referral systems, or optimizing for retention over…",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "influence-craft",
+      "description": "Maps organizational power dynamics and builds influence without authority using Jeffrey Pfeffer's power frameworks. Use when getting buy-in for ideas, navigating company politics, managing up, or building coalitions across teams.",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "jtbd-building",
+      "description": "Builds features based on Jobs-to-be-Done theory using Bob Moesta's frameworks. Use when designing features, identifying customer jobs, understanding push/pull forces, or uncovering hidden needs beyond stated feature requests.",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "launch-execution",
+      "description": "Helps write launch copy, position products, and create go-to-market materials using April Dunford's positioning framework and Airbnb's product marketing approach. Use when launching features, writing announcements, creating marketing materials, or positioning products.",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "metrics-frameworks",
+      "description": "Defines right metrics using North Star framework, AARRR, and leading vs lagging indicators. Use when choosing metrics, instrumenting products, creating dashboards, or distinguishing vanity metrics from actionable ones.",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "okr-frameworks",
+      "description": "Writes effective OKRs using Christina Wodtke's best practices and Google's OKR methodology. Use when setting goals, aligning teams, creating measurement frameworks, or tracking quarterly progress.",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "one-step-better-ai-pm",
+      "description": "Get one actionable improvement for your AI product based on the latest GenAI PM briefs. Fetch the last 5 days of curated AI PM insights from genaipm.com, analyze the current repo/project, find synergy between trending topics and the user's work, then research the source materi…",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "positioning-craft",
+      "description": "Crafts product positioning using April Dunford's positioning framework. Use when defining target customers, choosing categories, identifying alternatives, or articulating differentiated value. Based on Obviously Awesome methodology.",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "prioritization-craft",
+      "description": "Applies prioritization frameworks including RICE, ICE, Value vs Effort, and Kano model. Use when prioritizing features, managing backlog, making tradeoffs, or saying no gracefully. Based on Shreyas Doshi and Intercom frameworks.",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "quality-speed",
+      "description": "Decides when quality matters vs move fast, based on Dylan Field (Figma) craft philosophy and Brian Chesky (Airbnb) details obsession. Use when balancing shipping speed with excellence, deciding if refactoring is needed, or determining which details create moats vs which to skip.",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "ship-decisions",
+      "description": "Guides \"ship or iterate?\" decisions using Shreyas Doshi's frameworks, Marty Cagan's shipping philosophy, and Tobi Lutke's reversible decision-making. Use when deciding if feature is ready, preventing perfectionism paralysis, applying one-way vs two-way door thinking, or balanc…",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "stakeholder-craft",
+      "description": "Manages stakeholder relationships using Kim Scott's Radical Candor and Carole Robin's interpersonal dynamics. Use when giving/receiving feedback, navigating difficult conversations, or building trust across teams.",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "strategic-build",
+      "description": "Distinguishes strategic vs tactical work during development using Shreyas Doshi's frameworks and Marty Cagan's empowered teams principles. Use when making architectural decisions, choosing what to build, preventing \"product theater\", or applying the LNO framework (Leverage, Ne…",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "strategic-pm",
+      "description": "Shifts thinking from tactical to strategic using Anneka Gupta's frameworks for becoming more strategic. Use when escaping feature factory, moving from output to outcomes, or communicating strategic value.",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "strategic-storytelling",
+      "description": "Crafts product narratives using Andy Raskin's strategic narrative structure and Nancy Duarte's presentation frameworks. Use when writing pitches, creating presentations, framing features as stories, or building compelling product narratives.",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "strategy-frameworks",
+      "description": "Creates product strategies using Crossing the Chasm, Playing to Win, and strategic canvas frameworks. Use when defining where to play and how to win, choosing beachhead markets, or connecting tactics to strategy.",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "user-feedback-system",
+      "description": "Builds feedback collection systems using Superhuman's PMF framework and YC's \"talk to users\" methodology. Use when implementing NPS surveys, scheduling user interviews, or measuring product-market fit.",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "workplace-navigation",
+      "description": "Handles difficult colleagues and resolves conflicts using frameworks from Anneka Gupta and workplace dynamics research. Use when dealing with blocking colleagues, toxic dynamics, or maintaining relationships under stress.",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "zero-to-launch",
+      "description": "Guides Claude from idea to working prototype using frameworks from OpenAI, Figma, and Airbnb. Use when starting new product features, planning MVP scope, making build-vs-buy decisions, or guiding users from concept to shippable prototype. Applies AI-first thinking (Kevin Weil)…",
+      "plugin": "awesome-pm-skills",
+      "role": "Product mgmt",
+      "install": "claude plugin install awesome-pm-skills@zeev-playground",
+      "upstream": "menkesu/awesome-pm-skills",
+      "source_repo": "Zeev-L/awesome-pm-skills"
+    },
+    {
+      "skill": "claude-reviewer",
+      "description": "Review any project's .claude/ setup against Claude Code best practices and produce an actionable improvement report. Use when: \"/claude-reviewer\", \"review my claude config\", \"audit .claude setup\", \"check my CLAUDE.md\", \"how good is my claude config\", \"rate this project's claud…",
+      "plugin": "claude-reviewer",
+      "role": "Utilities",
+      "install": "claude plugin install claude-reviewer@zeev-playground",
+      "upstream": "omriariav/omri-cc-stuff",
+      "source_repo": "Zeev-L/omri-a.-cc-stuff"
+    },
+    {
+      "skill": "find-session",
+      "description": "Search past Claude Code conversations by keyword and return session IDs for resuming. Use when the user asks to find, locate, or look for a past/previous conversation, or needs a session ID to resume a conversation with claude --resume. NOT for searching within a conversation …",
+      "plugin": "find-session",
+      "role": "Utilities",
+      "install": "claude plugin install find-session@zeev-playground",
+      "upstream": "omriariav/omri-cc-stuff",
+      "source_repo": "Zeev-L/omri-a.-cc-stuff"
+    },
+    {
+      "skill": "gdoc-math",
+      "description": "Convert Markdown with LaTeX math into a native Google Doc whose equations are real, editable equation objects (not images, not literal $$ text). Use when: \"/gdoc-math\", \"turn this markdown into a Google Doc with editable equations\", \"convert this LaTeX/formulas to a Google Doc…",
+      "plugin": "gdoc-math",
+      "role": "Utilities",
+      "install": "claude plugin install gdoc-math@zeev-playground",
+      "upstream": "omriariav/omri-cc-stuff",
+      "source_repo": "Zeev-L/omri-a.-cc-stuff"
+    },
+    {
+      "skill": "autoplan",
+      "description": "Auto-review pipeline — reads the full CEO, design, eng, and DX review skills from disk and runs them sequentially with auto-decisions using 6 decision principles. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "benchmark",
+      "description": "Performance regression detection using the browse daemon. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "benchmark-models",
+      "description": "Cross-model benchmark for gstack skills. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "browse",
+      "description": "Fast headless browser for QA testing and site dogfooding. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "canary",
+      "description": "Post-deploy canary monitoring. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "careful",
+      "description": "Safety guardrails for destructive commands. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "codex",
+      "description": "OpenAI Codex CLI wrapper — three modes. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "context-restore",
+      "description": "Restore working context saved earlier by /context-save. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "context-save",
+      "description": "Save working context. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "cso",
+      "description": "Chief Security Officer mode. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "design-consultation",
+      "description": "Design consultation: understands your product, researches the landscape, proposes a complete design system (aesthetic, typography, color, layout, spacing, motion), and generates font+color preview... (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "design-html",
+      "description": "Design finalization: generates production-quality Pretext-native HTML/CSS. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "design-review",
+      "description": "Designer's eye QA: finds visual inconsistency, spacing issues, hierarchy problems, AI slop patterns, and slow interactions — then fixes them. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "design-shotgun",
+      "description": "Design shotgun: generate multiple AI design variants, open a comparison board, collect structured feedback, and iterate. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "devex-review",
+      "description": "Live developer experience audit. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "diagram",
+      "description": "Turn an English description (or mermaid source) into a diagram triplet: the source, an editable .excalidraw file you can open (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "document-generate",
+      "description": "Generate missing documentation from scratch for a feature, module, or entire project. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "document-release",
+      "description": "Post-ship documentation update. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "freeze",
+      "description": "Restrict file edits to a specific directory for the session. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "gstack",
+      "description": "Fast headless browser for QA testing and site dogfooding. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "gstack-openclaw-ceo-review",
+      "description": "Use when asked to review a plan, challenge a proposal, run a CEO review, poke holes in an approach, think bigger about scope, or decide whether to expand or reduce the plan.",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "gstack-openclaw-investigate",
+      "description": "Use when asked to debug, fix a bug, investigate an error, or do root cause analysis, and when users report errors, stack traces, unexpected behavior, or say something stopped working.",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "gstack-openclaw-office-hours",
+      "description": "Use when asked to brainstorm, evaluate whether an idea is worth building, run office hours, or think through a new product idea or design direction before any code is written.",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "gstack-openclaw-retro",
+      "description": "Weekly engineering retrospective. Analyzes commit history, work patterns, and code quality metrics with persistent history and trend tracking. Team-aware with per-person contributions, praise, and growth areas. Use when asked for weekly retro, what shipped this week, or engine…",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "gstack-upgrade",
+      "description": "Upgrade gstack to the latest version.",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "guard",
+      "description": "Full safety mode: destructive command warnings + directory-scoped edits. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "hackernews-frontpage",
+      "description": "Scrape the Hacker News front page (titles, points, comment counts).",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "health",
+      "description": "Code quality dashboard. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "investigate",
+      "description": "Systematic debugging with root cause investigation. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "ios-clean",
+      "description": "Remove the DebugBridge SPM package and all #if DEBUG wiring from an iOS app. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "ios-design-review",
+      "description": "Visual design audit for iOS apps on real hardware. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "ios-fix",
+      "description": "Autonomous iOS bug fixer. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "ios-qa",
+      "description": "Live-device iOS QA for SwiftUI apps. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "ios-sync",
+      "description": "Regenerate the iOS debug bridge against the latest upstream gstack templates. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "land-and-deploy",
+      "description": "Land and deploy workflow. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "landing-report",
+      "description": "Read-only queue dashboard for workspace-aware ship. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "learn",
+      "description": "Manage project learnings.",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "make-pdf",
+      "description": "Turn any markdown file into a publication-quality PDF. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "office-hours",
+      "description": "YC Office Hours — two modes. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "open-gstack-browser",
+      "description": "Launch GStack Browser — AI-controlled Chromium with the sidebar extension baked in.",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "pair-agent",
+      "description": "Pair a remote AI agent with your browser. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "plan-ceo-review",
+      "description": "CEO/founder-mode plan review. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "plan-design-review",
+      "description": "Designer's eye plan review — interactive, like CEO and Eng review. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "plan-devex-review",
+      "description": "Interactive developer experience plan review. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "plan-eng-review",
+      "description": "Eng manager-mode plan review. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "plan-tune",
+      "description": "Self-tuning question sensitivity + developer psychographic for gstack (v1: observational). (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "qa",
+      "description": "Systematically QA test a web application and fix bugs found. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "qa-only",
+      "description": "Report-only QA testing. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "retro",
+      "description": "Weekly engineering retrospective. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "review",
+      "description": "Pre-landing PR review. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "scrape",
+      "description": "Pull data from a web page. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "setup-browser-cookies",
+      "description": "Import cookies from your real Chromium browser into the headless browse session. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "setup-deploy",
+      "description": "Configure deployment settings for /land-and-deploy.",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "setup-gbrain",
+      "description": "Set up gbrain for this coding agent: install the CLI, initialize a local PGLite or Supabase brain, register MCP, capture per-remote trust policy. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "ship",
+      "description": "Ship workflow: detect + merge base branch, run tests, review diff, bump VERSION, update CHANGELOG, commit, push, create PR. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "skillify",
+      "description": "Codify the most recent successful /scrape flow into a permanent browser-skill on disk. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "spec",
+      "description": "Turn vague intent into a precise, executable spec in five phases. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "sync-gbrain",
+      "description": "Keep gbrain current with this repo's code and refresh agent search guidance in CLAUDE.md. Wraps the gstack-gbrain-sync orchestrator with state (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "unfreeze",
+      "description": "Clear the freeze boundary set by /freeze, allowing edits to all directories again. (gstack)",
+      "plugin": "gstack",
+      "role": "Software dev",
+      "install": "claude plugin install gstack@zeev-playground",
+      "upstream": "garrytan/gstack",
+      "source_repo": "Zeev-L/gstack"
+    },
+    {
+      "skill": "ab-testing",
+      "description": "When the user wants to plan, design, or implement an A/B test or experiment, or build a growth experimentation program. Also use when the user mentions \"A/B test,\" \"split test,\" \"experiment,\" \"test this change,\" \"variant copy,\" \"multivariate test,\" \"hypothesis,\" \"should I test…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "ad-creative",
+      "description": "When the user wants to generate, iterate, or scale ad creative — headlines, descriptions, primary text, or full ad variations — for any paid advertising platform. Also use when the user mentions 'ad copy variations,' 'ad creative,' 'generate headlines,' 'RSA headlines,' 'bulk …",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "ads",
+      "description": "When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also use when the user mentions 'PPC,' 'paid media,' 'ROAS,' 'CPA,' 'ad campaign,' 'retargeting,' 'audience targeting,' 'Google Ads,' …",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "ai-seo",
+      "description": "When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Also use when the user mentions 'AI SEO,' 'AEO,' 'GEO,' 'LLMO,' 'answer engine optimization,' 'generative engine optimization,' 'LLM optimization,' 'AI Overview…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "analytics",
+      "description": "When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions \"set up tracking,\" \"GA4,\" \"Google Analytics,\" \"conversion tracking,\" \"event tracking,\" \"UTM parameters,\" \"tag manager,\" \"GTM,\" \"analytics implementation,\" \"trac…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "aso",
+      "description": "When the user wants to audit or optimize an App Store or Google Play listing. Also use when the user mentions 'ASO audit,' 'app store optimization,' 'optimize my app listing,' 'improve app visibility,' 'app store ranking,' 'audit my listing,' 'why aren't people downloading my …",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "churn-prevention",
+      "description": "When the user wants to reduce churn, build cancellation flows, set up save offers, recover failed payments, or implement retention strategies. Also use when the user mentions 'churn,' 'cancel flow,' 'offboarding,' 'save offer,' 'dunning,' 'failed payment recovery,' 'win-back,'…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "co-marketing",
+      "description": "When the user wants to find co-marketing partners, plan joint campaigns, or brainstorm partnership opportunities. Use when the user says 'co-marketing,' 'partner marketing,' 'joint campaign,' 'who should we partner with,' 'integration marketing,' 'cross-promotion,' 'collaborat…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "cold-email",
+      "description": "Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails, prospecting emails, cold email campaigns, sales development emails, or SDR emails. Also use when the user mentions \"cold outreach,\" \"prospecting email,\" \"outb…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "community-marketing",
+      "description": "Build and leverage online communities to drive product growth and brand loyalty. Use when the user wants to create a community strategy, grow a Discord or Slack community, manage a forum or subreddit, build brand advocates, increase word-of-mouth, drive community-led growth, e…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "competitor-profiling",
+      "description": "When the user wants to research, profile, or analyze competitors from their URLs. Also use when the user mentions 'competitor profile,' 'competitor research,' 'competitor analysis,' 'profile this competitor,' 'analyze competitor,' 'competitive intelligence,' 'competitor deep d…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "competitors",
+      "description": "When the user wants to create competitor comparison or alternative pages for SEO and sales enablement. Also use when the user mentions 'alternative page,' 'vs page,' 'competitor comparison,' 'comparison page,' '[Product] vs [Product],' '[Product] alternative,' 'competitive lan…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "content-strategy",
+      "description": "When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions \"content strategy,\" \"what should I write about,\" \"content ideas,\" \"blog strategy,\" \"topic clusters,\" \"content planning,\" \"editoria…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "copy-editing",
+      "description": "When the user wants to edit, review, or improve existing marketing copy, or refresh outdated content. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 'polish this,' 'make this better,' 'copy sweep,' 'tighten this up,' 'this rea…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "copywriting",
+      "description": "When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says \"write copy for,\" \"improve this copy,\" \"rewrite this page,\" \"marketing co…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "cro",
+      "description": "When the user wants to optimize, improve, or increase conversions on any marketing page or form — including homepage, landing pages, pricing pages, feature pages, lead capture forms, or contact forms. Also use when the user says 'CRO,' 'conversion rate optimization,' 'this pag…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "customer-research",
+      "description": "When the user wants to conduct, analyze, or synthesize customer research. Use when the user mentions \"customer research,\" \"ICP research,\" \"talk to customers,\" \"analyze transcripts,\" \"customer interviews,\" \"survey analysis,\" \"support ticket analysis,\" \"voice of customer,\" \"VOC,…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "directory-submissions",
+      "description": "When the user wants to submit their product to startup, SaaS, AI, agent, MCP, no-code, or review directories for backlinks, domain rating, and discovery. Also use when the user mentions \"directory submissions,\" \"submit to directories,\" \"backlinks from directories,\" \"list my pr…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "emails",
+      "description": "When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use when the user mentions \"email sequence,\" \"drip campaign,\" \"nurture sequence,\" \"onboarding emails,\" \"welcome sequence,\" \"re-engagement emails,\"…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "free-tools",
+      "description": "When the user wants to plan, evaluate, or build a free tool for marketing purposes — lead generation, SEO value, or brand awareness. Also use when the user mentions \"engineering as marketing,\" \"free tool,\" \"marketing tool,\" \"calculator,\" \"generator,\" \"interactive tool,\" \"lead …",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "image",
+      "description": "When the user wants to create, generate, edit, or optimize images for marketing — blog heroes, social graphics, product mockups, profile banners, listing visuals, or brand assets. Also use when the user mentions 'AI image generation,' 'generate an image,' 'create a graphic,' '…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "launch",
+      "description": "When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user mentions 'launch,' 'Product Hunt,' 'feature release,' 'announcement,' 'go-to-market,' 'beta launch,' 'early access,' 'waitlist,' 'product update,' 'how do I launch t…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "lead-magnets",
+      "description": "When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. Also use when the user mentions \"lead magnet,\" \"gated content,\" \"content upgrade,\" \"downloadable,\" \"ebook,\" \"cheat sheet,\" \"checklist,\" \"template download,\" \"opt-in,\" \"freebie,…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "marketing-ideas",
+      "description": "When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product. Also use when the user asks for 'marketing ideas,' 'growth ideas,' 'how to market,' 'marketing strategies,' 'marketing tactics,' 'ways to promote,' 'ideas to grow,' 'what else c…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "marketing-plan",
+      "description": "When the user needs a comprehensive marketing plan for a client, a company they advise, or their own product. Also use when the user mentions \"marketing plan,\" \"growth plan,\" \"GTM plan,\" \"go-to-market plan,\" \"AARRR plan,\" \"90-day marketing plan,\" \"12-month marketing roadmap,\" …",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "marketing-psychology",
+      "description": "When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral science,' 'why people buy,' 'decision-making,' 'consumer behavio…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "onboarding",
+      "description": "When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value. Also use when the user mentions \"onboarding flow,\" \"activation rate,\" \"user activation,\" \"first-run experience,\" \"empty states,\" \"onboarding checklist,\" \"aha moment…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "paywalls",
+      "description": "When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates. Also use when the user mentions \"paywall,\" \"upgrade screen,\" \"upgrade modal,\" \"upsell,\" \"feature gate,\" \"convert free to paid,\" \"freemium conversion,\" \"trial expiration…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "popups",
+      "description": "When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also use when the user mentions \"exit intent,\" \"popup conversions,\" \"modal optimization,\" \"lead capture popup,\" \"email popup,\" \"announcement banner,\" \"overlay,\" \"…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "pricing",
+      "description": "When the user wants help with pricing decisions, packaging, or monetization strategy. Also use when the user mentions 'pricing,' 'pricing tiers,' 'freemium,' 'free trial,' 'packaging,' 'price increase,' 'value metric,' 'Van Westendorp,' 'willingness to pay,' 'monetization,' 'h…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "product-marketing",
+      "description": "When the user wants to create or update their product marketing context document. Also use when the user mentions 'product context,' 'marketing context,' 'set up context,' 'positioning,' 'who is my target audience,' 'describe my product,' 'ICP,' 'ideal customer profile,' or wa…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "programmatic-seo",
+      "description": "When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions \"programmatic SEO,\" \"template pages,\" \"pages at scale,\" \"directory pages,\" \"location pages,\" \"[keyword] + [city] pages,\" \"comparison pages,\" \"integration pages,\" \"…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "prospecting",
+      "description": "When the user wants to find, qualify, and build a list of prospects to reach out to — across B2B SaaS, general B2B, or local small businesses. Also use when the user mentions \"prospecting,\" \"build a prospect list,\" \"find prospects,\" \"find leads,\" \"lead gen list,\" \"find SaaS co…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "public-relations",
+      "description": "When the user wants help with public relations, earned media, press coverage, journalist outreach, or media strategy (not pull requests). Also use when the user mentions 'PR,' 'public relations,' 'press,' 'press release,' 'press coverage,' 'media outreach,' 'pitch a journalist…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "referrals",
+      "description": "When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy. Also use when the user mentions 'referral,' 'affiliate,' 'ambassador,' 'word of mouth,' 'viral loop,' 'refer a friend,' 'partner program,' 'referral incentive,…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "revops",
+      "description": "When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes. Also use when the user mentions 'RevOps,' 'revenue operations,' 'lead scoring,' 'lead routing,' 'MQL,' 'SQL,' 'pipeline stages,' 'deal desk,' 'CRM automation,'…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "sales-enablement",
+      "description": "When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also use when the user mentions 'sales deck,' 'pitch deck,' 'one-pager,' 'leave-behind,' 'objection handling,' 'deal-specific ROI analysis,' 'demo script,' 'talk …",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "schema",
+      "description": "When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user mentions \"schema markup,\" \"structured data,\" \"JSON-LD,\" \"rich snippets,\" \"schema.org,\" \"FAQ schema,\" \"product schema,\" \"review schema,\" \"breadcrumb schema,\" \"Go…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "seo-audit",
+      "description": "When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions \"SEO audit,\" \"technical SEO,\" \"why am I not ranking,\" \"SEO issues,\" \"on-page SEO,\" \"meta tags review,\" \"SEO health check,\" \"my traffic dropped,\" \"lost rankings,\" \"not sh…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "signup",
+      "description": "When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the user mentions \"signup conversions,\" \"registration friction,\" \"signup form optimization,\" \"free trial signup,\" \"reduce signup dropoff,\" \"account creation flow,\" …",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "site-architecture",
+      "description": "When the user wants to plan, map, or restructure their website's page hierarchy, navigation, URL structure, or internal linking. Also use when the user mentions \"sitemap,\" \"site map,\" \"visual sitemap,\" \"site structure,\" \"page hierarchy,\" \"information architecture,\" \"IA,\" \"navi…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "sms",
+      "description": "When the user wants to plan, build, or optimize SMS or MMS marketing — including welcome flows, abandoned cart texts, post-purchase, win-back, promotional sends, or transactional/auth SMS. Also use when the user mentions \"SMS marketing,\" \"text message campaigns,\" \"SMS sequence…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "social",
+      "description": "When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, Facebook, or other platforms, or wants to do social listening and engagement triage. Also use when the user mentions 'LinkedIn post,' 'Twitter thread,'…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "video",
+      "description": "When the user wants to create, generate, or produce video content using AI tools or programmatic frameworks. Also use when the user mentions 'video production,' 'AI video,' 'Remotion,' 'Hyperframes,' 'HeyGen,' 'Synthesia,' 'Veo,' 'Sora,' 'Runway,' 'Kling,' 'Seedance,' 'Hailuo,…",
+      "plugin": "marketing-skills",
+      "role": "PMM / Biz dev",
+      "install": "claude plugin install marketing-skills@zeev-playground",
+      "upstream": "coreyhaines31/marketingskills",
+      "source_repo": "Zeev-L/marketingskills"
+    },
+    {
+      "skill": "intended-vs-implemented",
+      "description": "The method for finding the gap between what a system is supposed to do and what the code actually does — the class of bug generic scanners miss because they have no model of intent. Defines what counts as documented intent, what counts as implementation evidence, which mismatc…",
+      "plugin": "pm-ai-shipping",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-ai-shipping@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "shipping-artifacts",
+      "description": "The durable documentation set that makes an AI-built (vibe-coded) app reviewable before shipping. A small core every app needs — architecture, user/permission flows, permissions, variables/secrets, and a test-coverage map — plus conditional docs added only when they apply: ema…",
+      "plugin": "pm-ai-shipping",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-ai-shipping@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "ab-test-analysis",
+      "description": "Analyze A/B test results with statistical significance, sample size validation, confidence intervals, and ship/extend/stop recommendations. Use when evaluating experiment results, checking if a test reached significance, interpreting split test data, or deciding whether to shi…",
+      "plugin": "pm-data-analytics",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-data-analytics@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "cohort-analysis",
+      "description": "Perform cohort analysis on user engagement data — retention curves, feature adoption trends, and segment-level insights. Use when analyzing user retention by cohort, studying feature adoption over time, investigating churn patterns, or identifying engagement trends.",
+      "plugin": "pm-data-analytics",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-data-analytics@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "sql-queries",
+      "description": "Generate SQL queries from natural language descriptions. Supports BigQuery, PostgreSQL, MySQL, and other dialects. Reads database schemas from uploaded diagrams or documentation. Use when writing SQL, building data reports, exploring databases, or translating business question…",
+      "plugin": "pm-data-analytics",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-data-analytics@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "brainstorm-okrs",
+      "description": "Brainstorm team-level OKRs aligned with company objectives — qualitative objectives with measurable key results. Use when setting quarterly OKRs, aligning team goals with company strategy, drafting objectives, or learning how to write effective OKRs.",
+      "plugin": "pm-execution",
+      "role": "Project mgmt",
+      "install": "claude plugin install pm-execution@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "create-prd",
+      "description": "Create a Product Requirements Document using a comprehensive 8-section template covering problem, objectives, segments, value propositions, solution, and release planning. Use when writing a PRD, documenting product requirements, preparing a feature spec, or reviewing an exist…",
+      "plugin": "pm-execution",
+      "role": "Project mgmt",
+      "install": "claude plugin install pm-execution@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "dummy-dataset",
+      "description": "Generate realistic dummy datasets for testing with customizable columns, constraints, and output formats (CSV, JSON, SQL, Python script). Use when creating test data, building mock datasets, or generating sample data for development and demos.",
+      "plugin": "pm-execution",
+      "role": "Project mgmt",
+      "install": "claude plugin install pm-execution@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "job-stories",
+      "description": "Create job stories using the 'When [situation], I want to [motivation], so I can [outcome]' format with detailed acceptance criteria. Use when writing job stories, creating JTBD-style backlog items, or expressing user situations and motivations.",
+      "plugin": "pm-execution",
+      "role": "Project mgmt",
+      "install": "claude plugin install pm-execution@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "outcome-roadmap",
+      "description": "Transform an output-focused roadmap into an outcome-focused one that communicates strategic intent. Rewrites initiatives as outcome statements reflecting user and business impacts. Use when shifting to outcome roadmaps, making a roadmap more strategic, or rewriting feature lis…",
+      "plugin": "pm-execution",
+      "role": "Project mgmt",
+      "install": "claude plugin install pm-execution@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "pre-mortem",
+      "description": "Run a pre-mortem risk analysis on a PRD or launch plan. Categorizes risks as Tigers (real problems), Paper Tigers (overblown concerns), and Elephants (unspoken worries), then classifies as launch-blocking, fast-follow, or track. Use when preparing for launch, stress-testing a …",
+      "plugin": "pm-execution",
+      "role": "Project mgmt",
+      "install": "claude plugin install pm-execution@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "prioritization-frameworks",
+      "description": "Reference guide to 9 prioritization frameworks with formulas, when-to-use guidance, and templates — RICE, ICE, Kano, MoSCoW, Opportunity Score, and more. Use when selecting a prioritization method, comparing frameworks like RICE vs ICE, or learning how different prioritization…",
+      "plugin": "pm-execution",
+      "role": "Project mgmt",
+      "install": "claude plugin install pm-execution@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "release-notes",
+      "description": "Generate user-facing release notes from tickets, PRDs, or changelogs. Creates clear, engaging summaries organized by category (new features, improvements, fixes). Use when writing release notes, creating changelogs, announcing product updates, or summarizing what shipped.",
+      "plugin": "pm-execution",
+      "role": "Project mgmt",
+      "install": "claude plugin install pm-execution@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "retro",
+      "description": "Facilitate a structured sprint retrospective — what went well, what didn't, and prioritized action items with owners and deadlines. Use when running a retrospective, reflecting on a sprint, creating action items from team feedback, or learning how to run effective retros.",
+      "plugin": "pm-execution",
+      "role": "Project mgmt",
+      "install": "claude plugin install pm-execution@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "sprint-plan",
+      "description": "Plan a sprint with capacity estimation, story selection, dependency mapping, and risk identification. Use when preparing for sprint planning, estimating team capacity, selecting stories, or balancing sprint scope against velocity.",
+      "plugin": "pm-execution",
+      "role": "Project mgmt",
+      "install": "claude plugin install pm-execution@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "stakeholder-map",
+      "description": "Build a stakeholder map using a power/interest grid, identify communication strategies per quadrant, and generate a communication plan. Use when managing stakeholders, preparing for a launch, aligning cross-functional teams, or planning stakeholder engagement.",
+      "plugin": "pm-execution",
+      "role": "Project mgmt",
+      "install": "claude plugin install pm-execution@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "strategy-red-team",
+      "description": "Red-team a PRD, roadmap, or strategy by attacking its load-bearing assumptions before reality does. Steelmans then attacks each claim, ranks failure modes by impact × likelihood × cheapness-to-test, and returns the cheapest test and kill criteria for each. Use when stress-test…",
+      "plugin": "pm-execution",
+      "role": "Project mgmt",
+      "install": "claude plugin install pm-execution@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "summarize-meeting",
+      "description": "Summarize a meeting transcript into structured notes with date, participants, topic, key decisions, summary points, and action items. Use when processing meeting recordings, creating meeting notes, writing meeting minutes, or recapping discussions.",
+      "plugin": "pm-execution",
+      "role": "Project mgmt",
+      "install": "claude plugin install pm-execution@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "test-scenarios",
+      "description": "Create comprehensive test scenarios from user stories with test objectives, starting conditions, user roles, step-by-step actions, and expected outcomes. Use when writing QA test cases, creating test plans, defining acceptance tests, or preparing for feature validation.",
+      "plugin": "pm-execution",
+      "role": "Project mgmt",
+      "install": "claude plugin install pm-execution@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "user-stories",
+      "description": "Create user stories following the 3 C's (Card, Conversation, Confirmation) and INVEST criteria with descriptions, design links, and acceptance criteria. Use when writing user stories, breaking down features into backlog items, or defining acceptance criteria.",
+      "plugin": "pm-execution",
+      "role": "Project mgmt",
+      "install": "claude plugin install pm-execution@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "wwas",
+      "description": "Create product backlog items in Why-What-Acceptance format — independent, valuable, testable items with strategic context. Use when writing structured backlog items, breaking features into work items, or using the WWA format.",
+      "plugin": "pm-execution",
+      "role": "Project mgmt",
+      "install": "claude plugin install pm-execution@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "competitor-analysis",
+      "description": "Analyze competitors with strengths, weaknesses, and differentiation opportunities. Identifies direct competitors and maps the competitive landscape. Use when doing competitive research, preparing a competitive brief, or finding differentiation opportunities.",
+      "plugin": "pm-market-research",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-market-research@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "customer-journey-map",
+      "description": "Create an end-to-end customer journey map with stages, touchpoints, emotions, pain points, and opportunities. Use when mapping the customer experience, identifying friction points, improving onboarding, or visualizing the user journey.",
+      "plugin": "pm-market-research",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-market-research@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "market-segments",
+      "description": "Identify 3-5 potential customer segments with demographics, JTBD, and product fit analysis. Use when exploring market segments, identifying target audiences, evaluating new markets, or learning how to segment a market.",
+      "plugin": "pm-market-research",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-market-research@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "market-sizing",
+      "description": "Estimate market size using TAM, SAM, and SOM with top-down and bottom-up approaches. Use when sizing a market opportunity, estimating addressable market, preparing for investor pitches, or evaluating market entry.",
+      "plugin": "pm-market-research",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-market-research@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "sentiment-analysis",
+      "description": "Analyze user feedback data to identify segments with sentiment scores, JTBD, and product satisfaction insights. Use when analyzing user feedback at scale, running sentiment analysis on reviews or surveys, or identifying satisfaction patterns.",
+      "plugin": "pm-market-research",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-market-research@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "user-personas",
+      "description": "Create refined user personas from research data — 3 personas with JTBD, pains, gains, and unexpected insights. Use when building personas from survey data, creating user profiles from research, or segmenting users for product decisions.",
+      "plugin": "pm-market-research",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-market-research@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "user-segmentation",
+      "description": "Segment users from feedback data based on behavior, JTBD, and needs. Identifies at least 3 distinct user segments. Use when segmenting a user base, analyzing diverse user feedback, or building a segmentation model.",
+      "plugin": "pm-market-research",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-market-research@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "analyze-feature-requests",
+      "description": "Analyze and prioritize a list of feature requests by theme, strategic alignment, impact, effort, and risk. Use when reviewing customer feature requests, triaging a backlog, or making prioritization decisions.",
+      "plugin": "pm-product-discovery",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-product-discovery@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "brainstorm-experiments-existing",
+      "description": "Design experiments to test assumptions for an existing product — prototypes, A/B tests, spikes, and other low-effort validation methods. Use when validating assumptions, testing feature ideas cheaply, or planning product experiments.",
+      "plugin": "pm-product-discovery",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-product-discovery@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "brainstorm-experiments-new",
+      "description": "Design lean startup experiments (pretotypes) for a new product. Creates XYZ hypotheses and suggests low-effort validation methods like landing pages, explainer videos, and pre-orders. Use when validating a new product idea, creating pretotypes, or testing market demand.",
+      "plugin": "pm-product-discovery",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-product-discovery@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "brainstorm-ideas-existing",
+      "description": "Brainstorm product ideas for an existing product using multi-perspective ideation from PM, Designer, and Engineer viewpoints. Use when generating new feature ideas, brainstorming solutions for an identified opportunity, or ideating with a product trio.",
+      "plugin": "pm-product-discovery",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-product-discovery@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "brainstorm-ideas-new",
+      "description": "Brainstorm feature ideas for a new product in initial discovery from PM, Designer, and Engineer perspectives. Use when starting product discovery for a new product, exploring features for a startup idea, or doing initial ideation.",
+      "plugin": "pm-product-discovery",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-product-discovery@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "identify-assumptions-existing",
+      "description": "Identify risky assumptions for a feature idea in an existing product across Value, Usability, Viability, and Feasibility. Uses multi-perspective devil's advocate thinking. Use when stress-testing a feature idea, doing risk assessment, or preparing for assumption mapping.",
+      "plugin": "pm-product-discovery",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-product-discovery@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "identify-assumptions-new",
+      "description": "Identify risky assumptions for a new product idea across 8 risk categories including Go-to-Market, Strategy, and Team. Use when evaluating startup risks, assessing a new product concept, or mapping assumptions for a new venture.",
+      "plugin": "pm-product-discovery",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-product-discovery@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "interview-script",
+      "description": "Create a structured customer interview script with JTBD probing questions, warm-up, core exploration, and wrap-up sections. Follows The Mom Test principles — no leading questions, no pitching, focus on past behavior. Use when preparing for user interviews, creating interview g…",
+      "plugin": "pm-product-discovery",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-product-discovery@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "metrics-dashboard",
+      "description": "Define and design a product metrics dashboard with key metrics, data sources, visualization types, and alert thresholds. Use when creating a metrics dashboard, defining KPIs, setting up product analytics, or building a data monitoring plan.",
+      "plugin": "pm-product-discovery",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-product-discovery@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "opportunity-solution-tree",
+      "description": "Build an Opportunity Solution Tree (OST) to structure product discovery — map a desired outcome to opportunities, solutions, and experiments. Based on Teresa Torres' Continuous Discovery Habits. Use when structuring discovery work, mapping opportunities to solutions, or decidi…",
+      "plugin": "pm-product-discovery",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-product-discovery@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "prioritize-assumptions",
+      "description": "Prioritize assumptions using an Impact × Risk matrix and suggest experiments for each. Use when triaging a list of assumptions, deciding what to test first, or applying the assumption prioritization canvas.",
+      "plugin": "pm-product-discovery",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-product-discovery@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "prioritize-features",
+      "description": "Prioritize a backlog of feature ideas based on impact, effort, risk, and strategic alignment with top 5 recommendations. Use when prioritizing a feature backlog, making scope decisions, or ranking product ideas.",
+      "plugin": "pm-product-discovery",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-product-discovery@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "summarize-interview",
+      "description": "Summarize a customer interview transcript into a structured template with JTBD, satisfaction signals, and action items. Use when processing interview recordings or transcripts, synthesizing discovery interviews, or creating interview summaries.",
+      "plugin": "pm-product-discovery",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-product-discovery@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "ansoff-matrix",
+      "description": "Generate an Ansoff Matrix analysis mapping growth strategies across market penetration, market development, product development, and diversification. Use when considering growth options, planning market expansion, or evaluating strategic growth paths.",
+      "plugin": "pm-product-strategy",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-product-strategy@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "business-model",
+      "description": "Generate a Business Model Canvas with all 9 building blocks. Use when creating a business model, documenting how a business creates value, or analyzing an existing business model.",
+      "plugin": "pm-product-strategy",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-product-strategy@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "lean-canvas",
+      "description": "Generate a Lean Canvas with problem, solution, metrics, cost structure, UVP, unfair advantage, channels, segments, and revenue. Use when exploring a lean startup canvas, testing a business hypothesis, or modeling a new venture.",
+      "plugin": "pm-product-strategy",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-product-strategy@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "monetization-strategy",
+      "description": "Brainstorm 3-5 monetization strategies with audience fit, risks, and validation experiments. Use when exploring revenue models, evaluating pricing strategies, or deciding how to monetize a product.",
+      "plugin": "pm-product-strategy",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-product-strategy@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "pestle-analysis",
+      "description": "Perform a PESTLE analysis covering Political, Economic, Social, Technological, Legal, and Environmental factors. Use when assessing the macro environment, doing strategic planning, or evaluating external factors affecting your business.",
+      "plugin": "pm-product-strategy",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-product-strategy@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "porters-five-forces",
+      "description": "Perform Porter's Five Forces analysis — competitive rivalry, supplier power, buyer power, threat of substitutes, and threat of new entrants. Use when analyzing industry dynamics, assessing competitive forces, or evaluating market attractiveness.",
+      "plugin": "pm-product-strategy",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-product-strategy@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "pricing-strategy",
+      "description": "Analyze and design pricing strategies including pricing models, competitive pricing analysis, willingness-to-pay estimation, and price elasticity. Use when setting prices, evaluating pricing models, preparing for a pricing change, or comparing freemium vs paid approaches.",
+      "plugin": "pm-product-strategy",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-product-strategy@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "product-strategy",
+      "description": "Create a comprehensive product strategy using the 9-section Product Strategy Canvas — vision, segments, costs, value propositions, trade-offs, metrics, growth, capabilities, and defensibility. Use when building a product strategy, creating a strategic plan, or defining product…",
+      "plugin": "pm-product-strategy",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-product-strategy@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "product-vision",
+      "description": "Brainstorm an inspiring, achievable, and emotional product vision that motivates teams and aligns stakeholders. Use when defining or refining a product vision, creating a vision statement, or aligning the team around a shared direction.",
+      "plugin": "pm-product-strategy",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-product-strategy@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "startup-canvas",
+      "description": "Generate a Startup Canvas combining Product Strategy (9 sections) and Business Model (costs + revenue) for a new product. An alternative to BMC and Lean Canvas that separates strategy from business model. Use when launching a new product or evaluating a startup concept.",
+      "plugin": "pm-product-strategy",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-product-strategy@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "swot-analysis",
+      "description": "Perform a detailed SWOT analysis — strengths, weaknesses, opportunities, and threats with actionable recommendations. Use when doing strategic assessment, competitive analysis, or evaluating a product or business position.",
+      "plugin": "pm-product-strategy",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-product-strategy@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "value-proposition",
+      "description": "Design a detailed value proposition using a 6-part JTBD template — Who, Why, What before, How, What after, Alternatives. Use when creating a value proposition, analyzing customer value delivery, or articulating why customers should choose your product.",
+      "plugin": "pm-product-strategy",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-product-strategy@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "draft-nda",
+      "description": "Draft a detailed Non-Disclosure Agreement between two parties covering information types, jurisdiction, and clauses needing legal review. Use when creating confidentiality agreements or preparing an NDA for a partnership.",
+      "plugin": "pm-toolkit",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-toolkit@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "grammar-check",
+      "description": "Identify grammar, logical, and flow errors in text and suggest targeted fixes without rewriting the entire text. Use when proofreading content, checking writing quality, or reviewing a draft.",
+      "plugin": "pm-toolkit",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-toolkit@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "privacy-policy",
+      "description": "Draft a detailed privacy policy covering data types, jurisdiction, GDPR and compliance considerations, and clauses needing legal review. Use when creating a privacy policy, updating data protection documentation, or preparing for compliance.",
+      "plugin": "pm-toolkit",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-toolkit@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "review-resume",
+      "description": "Comprehensive PM resume review and tailoring against 10 best practices including XYZ+S formula, keyword optimization, job-specific tailoring, and structure. Use when reviewing a PM resume, preparing for job applications, or improving resume impact.",
+      "plugin": "pm-toolkit",
+      "role": "Product mgmt",
+      "install": "claude plugin install pm-toolkit@zeev-playground",
+      "upstream": "phuryn/pm-skills",
+      "source_repo": "Zeev-L/pm-skills"
+    },
+    {
+      "skill": "setup-pulse",
+      "description": "Install claude-pulse statusline for real-time token usage monitoring. Use when user says \"/setup-pulse\", \"install statusline\", \"setup pulse\".",
+      "plugin": "setup-pulse",
+      "role": "Utilities",
+      "install": "claude plugin install setup-pulse@zeev-playground",
+      "upstream": "omriariav/omri-cc-stuff",
+      "source_repo": "Zeev-L/omri-a.-cc-stuff"
+    },
+    {
+      "skill": "skill-reviewer",
+      "description": "Evaluate any skill's design quality against best practices and flag anti-patterns. Use when: \"/skill-reviewer\", \"review this skill\", \"evaluate skill quality\", \"audit skill\", \"how good is this skill\", \"rate this skill\". NOT for: conversation-level reflection (use /reflect), cod…",
+      "plugin": "skill-reviewer",
+      "role": "Utilities",
+      "install": "claude plugin install skill-reviewer@zeev-playground",
+      "upstream": "omriariav/omri-cc-stuff",
+      "source_repo": "Zeev-L/omri-a.-cc-stuff"
+    },
+    {
+      "skill": "bulletize",
+      "description": "Use when the user wants to convert text into clear, concise bullet points. Rewrites paragraphs or messy text into short, scannable bullets.",
+      "plugin": "text-tools",
+      "role": "Utilities",
+      "install": "claude plugin install text-tools@zeev-playground",
+      "upstream": "Zeev-L (original)",
+      "source_repo": "Zeev-L/playground"
+    },
+    {
+      "skill": "read",
+      "description": "Read a tweet from X (Twitter) by URL or ID and load it into the conversation. Use when user says \"/x:read <url>\", \"read this tweet\", \"what does this tweet say\", or pastes an x.com / twitter.com status link and wants to discuss, summarize, or reply to it. NOT for posting (use /…",
+      "plugin": "x",
+      "role": "Utilities",
+      "install": "claude plugin install x@zeev-playground",
+      "upstream": "omriariav/omri-cc-stuff",
+      "source_repo": "Zeev-L/omri-a.-cc-stuff"
+    },
+    {
+      "skill": "tweet",
+      "description": "Post tweets to X (Twitter) from Claude Code. Supports single tweets, threads (auto-split or manual), and replies. Use when user says \"/x:tweet\", \"post a tweet\", \"tweet this\", \"post a thread\", \"reply to this tweet\". NOT for reading tweets, analytics, scheduling, or DMs.",
+      "plugin": "x",
+      "role": "Utilities",
+      "install": "claude plugin install x@zeev-playground",
+      "upstream": "omriariav/omri-cc-stuff",
+      "source_repo": "Zeev-L/omri-a.-cc-stuff"
+    }
+  ],
+  "total_skills": 221,
+  "total_plugins": 18
+}

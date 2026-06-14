@@ -20,6 +20,19 @@ In an interactive session you can use the slash-command equivalents:
 `/plugin marketplace add Zeev-L/playground` then `/plugin install <name>@zeev-playground`.
 Update everything later with `claude plugin marketplace update zeev-playground`.
 
+> **HTTPS install note.** 14 of the plugins install with no setup — the 13 `git-subdir` plugins
+> (everything from `pm-skills` and `omri-a.-cc-stuff`) plus local `text-tools`, because they use explicit
+> HTTPS URLs. The **4 whole-repo plugins** — **`agent-skills`, `gstack`, `awesome-pm-skills`,
+> `marketing-skills`** — are `github` sources that Claude Code clones over **SSH**. On a machine without a
+> GitHub SSH key that will fail with `Host key verification failed`. Fix it once, either:
+>
+> ```bash
+> # Option A — make git use HTTPS for GitHub (recommended; matches a gh-token setup)
+> git config --global url."https://github.com/".insteadOf "git@github.com:"
+> ```
+>
+> Option B — set up a GitHub SSH key (https://docs.github.com/authentication/connecting-to-github-with-ssh).
+
 ## Plugins (18)
 
 | Plugin | What it is | Upstream source / attribution | Backup clone |
