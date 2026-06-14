@@ -2,6 +2,7 @@
   "marketplace": "zeev-playground",
   "roles": [
     "Software dev",
+    "Ops/DevOps",
     "Project mgmt",
     "Product mgmt",
     "PMM / Biz dev",
@@ -11,6 +12,9 @@
     {
       "name": "text-tools",
       "role": "Utilities",
+      "roles": [
+        "Utilities"
+      ],
       "upstream": "Zeev-L (original)",
       "attribution": "Zeev-L",
       "license": "—",
@@ -28,6 +32,9 @@
     {
       "name": "agent-skills",
       "role": "Software dev",
+      "roles": [
+        "Software dev"
+      ],
       "upstream": "addyosmani/agent-skills",
       "attribution": "Addy Osmani",
       "license": "MIT",
@@ -159,7 +166,11 @@
     },
     {
       "name": "gstack",
-      "role": "Software dev",
+      "role": "Software dev / Ops/DevOps",
+      "roles": [
+        "Software dev",
+        "Ops/DevOps"
+      ],
       "upstream": "garrytan/gstack",
       "attribution": "Garry Tan",
       "license": "MIT",
@@ -467,6 +478,9 @@
     {
       "name": "awesome-pm-skills",
       "role": "Product mgmt",
+      "roles": [
+        "Product mgmt"
+      ],
       "upstream": "menkesu/awesome-pm-skills",
       "attribution": "menkesu",
       "license": "MIT",
@@ -624,6 +638,9 @@
     {
       "name": "pm-product-discovery",
       "role": "Product mgmt",
+      "roles": [
+        "Product mgmt"
+      ],
       "upstream": "phuryn/pm-skills",
       "attribution": "Pawel Huryn",
       "license": "MIT",
@@ -701,6 +718,9 @@
     {
       "name": "pm-product-strategy",
       "role": "Product mgmt",
+      "roles": [
+        "Product mgmt"
+      ],
       "upstream": "phuryn/pm-skills",
       "attribution": "Pawel Huryn",
       "license": "MIT",
@@ -773,6 +793,9 @@
     {
       "name": "pm-toolkit",
       "role": "Product mgmt",
+      "roles": [
+        "Product mgmt"
+      ],
       "upstream": "phuryn/pm-skills",
       "attribution": "Pawel Huryn",
       "license": "MIT",
@@ -805,6 +828,9 @@
     {
       "name": "pm-execution",
       "role": "Project mgmt",
+      "roles": [
+        "Project mgmt"
+      ],
       "upstream": "phuryn/pm-skills",
       "attribution": "Pawel Huryn",
       "license": "MIT",
@@ -897,6 +923,9 @@
     {
       "name": "pm-market-research",
       "role": "Product mgmt",
+      "roles": [
+        "Product mgmt"
+      ],
       "upstream": "phuryn/pm-skills",
       "attribution": "Pawel Huryn",
       "license": "MIT",
@@ -944,6 +973,9 @@
     {
       "name": "pm-ai-shipping",
       "role": "Product mgmt",
+      "roles": [
+        "Product mgmt"
+      ],
       "upstream": "phuryn/pm-skills",
       "attribution": "Pawel Huryn",
       "license": "MIT",
@@ -966,6 +998,9 @@
     {
       "name": "pm-data-analytics",
       "role": "Product mgmt",
+      "roles": [
+        "Product mgmt"
+      ],
       "upstream": "phuryn/pm-skills",
       "attribution": "Pawel Huryn",
       "license": "MIT",
@@ -993,6 +1028,9 @@
     {
       "name": "marketing-skills",
       "role": "PMM / Biz dev",
+      "roles": [
+        "PMM / Biz dev"
+      ],
       "upstream": "coreyhaines31/marketingskills",
       "attribution": "Corey Haines",
       "license": "MIT",
@@ -1225,6 +1263,9 @@
     {
       "name": "x",
       "role": "Utilities",
+      "roles": [
+        "Utilities"
+      ],
       "upstream": "omriariav/omri-cc-stuff",
       "attribution": "Omri Ariav",
       "license": "MIT",
@@ -1247,6 +1288,9 @@
     {
       "name": "gdoc-math",
       "role": "Utilities",
+      "roles": [
+        "Utilities"
+      ],
       "upstream": "omriariav/omri-cc-stuff",
       "attribution": "Omri Ariav",
       "license": "MIT",
@@ -1264,6 +1308,9 @@
     {
       "name": "find-session",
       "role": "Utilities",
+      "roles": [
+        "Utilities"
+      ],
       "upstream": "omriariav/omri-cc-stuff",
       "attribution": "Omri Ariav",
       "license": "MIT",
@@ -1281,6 +1328,9 @@
     {
       "name": "setup-pulse",
       "role": "Utilities",
+      "roles": [
+        "Utilities"
+      ],
       "upstream": "omriariav/omri-cc-stuff",
       "attribution": "Omri Ariav",
       "license": "MIT",
@@ -1298,6 +1348,9 @@
     {
       "name": "claude-reviewer",
       "role": "Utilities",
+      "roles": [
+        "Utilities"
+      ],
       "upstream": "omriariav/omri-cc-stuff",
       "attribution": "Omri Ariav",
       "license": "MIT",
@@ -1315,6 +1368,9 @@
     {
       "name": "skill-reviewer",
       "role": "Utilities",
+      "roles": [
+        "Utilities"
+      ],
       "upstream": "omriariav/omri-cc-stuff",
       "attribution": "Omri Ariav",
       "license": "MIT",
@@ -1935,7 +1991,7 @@
       "skill": "canary",
       "description": "Post-deploy canary monitoring. (gstack)",
       "plugin": "gstack",
-      "role": "Software dev",
+      "role": "Ops/DevOps",
       "install": "claude plugin install gstack@zeev-playground",
       "upstream": "garrytan/gstack",
       "source_repo": "Zeev-L/gstack",
@@ -1985,7 +2041,7 @@
       "skill": "cso",
       "description": "Chief Security Officer mode. (gstack)",
       "plugin": "gstack",
-      "role": "Software dev",
+      "role": "Ops/DevOps",
       "install": "claude plugin install gstack@zeev-playground",
       "upstream": "garrytan/gstack",
       "source_repo": "Zeev-L/gstack",
@@ -2235,7 +2291,7 @@
       "skill": "land-and-deploy",
       "description": "Land and deploy workflow. (gstack)",
       "plugin": "gstack",
-      "role": "Software dev",
+      "role": "Ops/DevOps",
       "install": "claude plugin install gstack@zeev-playground",
       "upstream": "garrytan/gstack",
       "source_repo": "Zeev-L/gstack",
@@ -2245,7 +2301,7 @@
       "skill": "landing-report",
       "description": "Read-only queue dashboard for workspace-aware ship. (gstack)",
       "plugin": "gstack",
-      "role": "Software dev",
+      "role": "Ops/DevOps",
       "install": "claude plugin install gstack@zeev-playground",
       "upstream": "garrytan/gstack",
       "source_repo": "Zeev-L/gstack",
@@ -2415,7 +2471,7 @@
       "skill": "setup-deploy",
       "description": "Configure deployment settings for /land-and-deploy.",
       "plugin": "gstack",
-      "role": "Software dev",
+      "role": "Ops/DevOps",
       "install": "claude plugin install gstack@zeev-playground",
       "upstream": "garrytan/gstack",
       "source_repo": "Zeev-L/gstack",
@@ -2425,7 +2481,7 @@
       "skill": "setup-gbrain",
       "description": "Set up gbrain for this coding agent: install the CLI, initialize a local PGLite or Supabase brain, register MCP, capture per-remote trust policy. (gstack)",
       "plugin": "gstack",
-      "role": "Software dev",
+      "role": "Ops/DevOps",
       "install": "claude plugin install gstack@zeev-playground",
       "upstream": "garrytan/gstack",
       "source_repo": "Zeev-L/gstack",
@@ -2435,7 +2491,7 @@
       "skill": "ship",
       "description": "Ship workflow: detect + merge base branch, run tests, review diff, bump VERSION, update CHANGELOG, commit, push, create PR. (gstack)",
       "plugin": "gstack",
-      "role": "Software dev",
+      "role": "Ops/DevOps",
       "install": "claude plugin install gstack@zeev-playground",
       "upstream": "garrytan/gstack",
       "source_repo": "Zeev-L/gstack",
@@ -2465,7 +2521,7 @@
       "skill": "sync-gbrain",
       "description": "Keep gbrain current with this repo's code and refresh agent search guidance in CLAUDE.md. Wraps the gstack-gbrain-sync orchestrator with state (gstack)",
       "plugin": "gstack",
-      "role": "Software dev",
+      "role": "Ops/DevOps",
       "install": "claude plugin install gstack@zeev-playground",
       "upstream": "garrytan/gstack",
       "source_repo": "Zeev-L/gstack",

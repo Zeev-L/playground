@@ -37,6 +37,17 @@ ROLE = {
 ROLES_ORDER = ["Software dev", "Ops/DevOps", "Project mgmt", "Product mgmt",
                "PMM / Biz dev", "Utilities"]
 
+# gstack spans dev + ops; these skills cleanly fit Ops/DevOps (deploy / release / infra / security).
+# Everything else in gstack stays under its plugin's base role (Software dev).
+GSTACK_OPS = {"canary", "land-and-deploy", "setup-deploy", "ship", "landing-report",
+              "setup-gbrain", "sync-gbrain", "cso"}
+
+
+def role_for(plugin, skill_name, base_role):
+    if plugin == "gstack" and skill_name in GSTACK_OPS:
+        return "Ops/DevOps"
+    return base_role
+
 # source clone dir name -> (upstream slug, attribution, license)
 UPSTREAM = {
     "addyosmani-agent-skills": ("addyosmani/agent-skills", "Addy Osmani", "MIT"),
@@ -151,24 +162,28 @@ def main():
             root = repo_root / path if path not in (".", "") else repo_root
             up, attr, lic = UPSTREAM.get(cdir, (cdir, "—", "MIT"))
             src_repo = f"Zeev-L/{cdir}"
-        role = ROLE.get(name, "Utilities")
+        base_role = ROLE.get(name, "Utilities")
         install = f"claude plugin install {name}@zeev-playground"
         # whole-repo `github` sources are cloned over SSH by the installer -> need a one-time
         # git-HTTPS config on machines without a GitHub SSH key. git-subdir + local are zero-setup.
         src = pl["source"]
         setup = "https" if (isinstance(src, dict) and src.get("source") == "github") else "zero"
         skills = collect_skills(root)
+        plugin_role_set = set()
         for s in skills:
+            srole = role_for(name, s["skill"], base_role)
+            plugin_role_set.add(srole)
             all_skills.append({"skill": s["skill"], "description": s["description"],
-                               "plugin": name, "role": role, "install": install,
+                               "plugin": name, "role": srole, "install": install,
                                "upstream": up, "source_repo": src_repo, "setup": setup})
-        plugins.append({"name": name, "role": role, "upstream": up, "attribution": attr,
-                        "license": lic, "install": install, "skill_count": len(skills),
-                        "setup": setup, "skills": skills})
+        plugin_roles = sorted(plugin_role_set, key=ROLES_ORDER.index) or [base_role]
+        plugins.append({"name": name, "role": " / ".join(plugin_roles), "roles": plugin_roles,
+                        "upstream": up, "attribution": attr, "license": lic, "install": install,
+                        "skill_count": len(skills), "setup": setup, "skills": skills})
         print(f"  {name}: {len(skills)} skills", file=sys.stderr)
 
     all_skills.sort(key=lambda s: (s["plugin"], s["skill"]))
-    roles_present = [r for r in ROLES_ORDER if any(p["role"] == r for p in plugins)]
+    roles_present = [r for r in ROLES_ORDER if any(s["role"] == r for s in all_skills)]
     data = {"marketplace": mkt.get("name", "zeev-playground"),
             "roles": roles_present, "plugins": plugins, "skills": all_skills,
             "total_skills": len(all_skills), "total_plugins": len(plugins),
