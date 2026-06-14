@@ -43,20 +43,17 @@
     {
       "name": "pm-product-discovery",
       "source": {
-        "source": "github",
-        "repo": "Zeev-L/pm-skills",
+        "source": "git-subdir",
+        "url": "https://github.com/Zeev-L/pm-skills.git",
         "path": "pm-product-discovery"
       },
-      "description": "Teresa Torres discovery: opportunity-solution trees, assumption tests, interview scripts. Pawel Huryn.",
-      "skills": [
-        "./skills"
-      ]
+      "description": "Teresa Torres discovery: opportunity-solution trees, assumption tests, interview scripts. Pawel Huryn."
     },
     {
       "name": "pm-product-strategy",
       "source": {
-        "source": "github",
-        "repo": "Zeev-L/pm-skills",
+        "source": "git-subdir",
+        "url": "https://github.com/Zeev-L/pm-skills.git",
         "path": "pm-product-strategy"
       },
       "description": "Product strategy canvases: Lean/Business-Model, Porter's, SWOT, Ansoff. Pawel Huryn."
@@ -64,8 +61,8 @@
     {
       "name": "pm-toolkit",
       "source": {
-        "source": "github",
-        "repo": "Zeev-L/pm-skills",
+        "source": "git-subdir",
+        "url": "https://github.com/Zeev-L/pm-skills.git",
         "path": "pm-toolkit"
       },
       "description": "Core PM toolkit skills. Pawel Huryn."
@@ -73,8 +70,8 @@
     {
       "name": "pm-execution",
       "source": {
-        "source": "github",
-        "repo": "Zeev-L/pm-skills",
+        "source": "git-subdir",
+        "url": "https://github.com/Zeev-L/pm-skills.git",
         "path": "pm-execution"
       },
       "description": "Delivery / project management: sprint planning, retros, OKRs, stakeholder maps. Pawel Huryn."
@@ -82,8 +79,8 @@
     {
       "name": "pm-market-research",
       "source": {
-        "source": "github",
-        "repo": "Zeev-L/pm-skills",
+        "source": "git-subdir",
+        "url": "https://github.com/Zeev-L/pm-skills.git",
         "path": "pm-market-research"
       },
       "description": "Market and user research skills. Pawel Huryn."
@@ -91,8 +88,8 @@
     {
       "name": "pm-ai-shipping",
       "source": {
-        "source": "github",
-        "repo": "Zeev-L/pm-skills",
+        "source": "git-subdir",
+        "url": "https://github.com/Zeev-L/pm-skills.git",
         "path": "pm-ai-shipping"
       },
       "description": "Shipping AI features: intended-vs-implemented, shipping artifacts. Pawel Huryn."
@@ -100,8 +97,8 @@
     {
       "name": "pm-data-analytics",
       "source": {
-        "source": "github",
-        "repo": "Zeev-L/pm-skills",
+        "source": "git-subdir",
+        "url": "https://github.com/Zeev-L/pm-skills.git",
         "path": "pm-data-analytics"
       },
       "description": "A/B test analysis, cohort analysis, SQL queries. Pawel Huryn."
@@ -119,8 +116,8 @@
     {
       "name": "x",
       "source": {
-        "source": "github",
-        "repo": "Zeev-L/omri-a.-cc-stuff",
+        "source": "git-subdir",
+        "url": "https://github.com/Zeev-L/omri-a.-cc-stuff.git",
         "path": "plugins/x"
       },
       "description": "Post and read tweets on X (Twitter) from Claude Code. Omri Ariav."
@@ -128,8 +125,8 @@
     {
       "name": "gdoc-math",
       "source": {
-        "source": "github",
-        "repo": "Zeev-L/omri-a.-cc-stuff",
+        "source": "git-subdir",
+        "url": "https://github.com/Zeev-L/omri-a.-cc-stuff.git",
         "path": "plugins/gdoc-math"
       },
       "description": "Markdown + LaTeX to a native Google Doc with editable equations. Omri Ariav."
@@ -137,8 +134,8 @@
     {
       "name": "find-session",
       "source": {
-        "source": "github",
-        "repo": "Zeev-L/omri-a.-cc-stuff",
+        "source": "git-subdir",
+        "url": "https://github.com/Zeev-L/omri-a.-cc-stuff.git",
         "path": "plugins/find-session"
       },
       "description": "Search past Claude Code conversations by keyword; get session IDs. Omri Ariav."
@@ -146,8 +143,8 @@
     {
       "name": "setup-pulse",
       "source": {
-        "source": "github",
-        "repo": "Zeev-L/omri-a.-cc-stuff",
+        "source": "git-subdir",
+        "url": "https://github.com/Zeev-L/omri-a.-cc-stuff.git",
         "path": "plugins/setup-pulse"
       },
       "description": "Install the claude-pulse statusline for token-usage monitoring. Omri Ariav."
@@ -155,8 +152,8 @@
     {
       "name": "claude-reviewer",
       "source": {
-        "source": "github",
-        "repo": "Zeev-L/omri-a.-cc-stuff",
+        "source": "git-subdir",
+        "url": "https://github.com/Zeev-L/omri-a.-cc-stuff.git",
         "path": "plugins/claude-reviewer"
       },
       "description": "Review a project's .claude/ setup against best practices. Omri Ariav."
@@ -164,8 +161,8 @@
     {
       "name": "skill-reviewer",
       "source": {
-        "source": "github",
-        "repo": "Zeev-L/omri-a.-cc-stuff",
+        "source": "git-subdir",
+        "url": "https://github.com/Zeev-L/omri-a.-cc-stuff.git",
         "path": "plugins/skill-reviewer"
       },
       "description": "Evaluate any skill's design quality and flag anti-patterns. Omri Ariav."
