@@ -1,100 +1,61 @@
-# Zeev's Claude Code Plugin Playground
+# zeev-playground — personal Claude Code skill marketplace
 
-A learning repo for building and distributing Claude Code plugins and skills.
+A personal [Claude Code](https://claude.com/claude-code) marketplace that **references** skills
+living in curated open-source repos. Most plugins point at **my own Zeev-L clones** of the upstream
+repos (for backup + stability); each clone auto-syncs from its upstream daily via a GitHub Action.
 
-## Correct Repo Structure
-
-A repo that is BOTH a marketplace AND contains a plugin with skills:
-
-```
-playground/
-├── .claude-plugin/
-│   └── marketplace.json          # The STORE catalog — lists available plugins
-└── text-tools/                    # A plugin (a wrapper that can hold many skills)
-    ├── .claude-plugin/
-    │   └── plugin.json            # The plugin's identity card
-    └── skills/
-        └── bulletize/             # One skill (add more folders here later)
-            └── SKILL.md           # The skill definition
-```
-
-## The Three Files
-
-### 1. `.claude-plugin/marketplace.json` (store catalog)
-```json
-{
-  "name": "zeev-playground",
-  "owner": { "name": "Zeev-L" },
-  "plugins": [
-    {
-      "name": "text-tools",
-      "source": "./text-tools",
-      "description": "A collection of text manipulation skills"
-    }
-  ]
-}
-```
-
-### 2. `text-tools/.claude-plugin/plugin.json` (plugin identity)
-```json
-{
-  "name": "text-tools",
-  "description": "A collection of text manipulation skills",
-  "version": "1.0.0"
-}
-```
-
-### 3. `text-tools/skills/bulletize/SKILL.md` (the skill)
-```markdown
----
-name: bulletize
-description: Use when the user wants to convert text into clear, concise bullet points.
----
-
-Take the text the user provides and rewrite it as clear, concise bullet points.
-Keep each bullet short — one idea per bullet.
-```
-
-## Install & Use
+## Install
 
 ```bash
-/plugin marketplace add https://github.com/Zeev-L/playground
-/plugin install text-tools@zeev-playground
-/reload-plugins
+# 1. Add this marketplace
+claude plugin marketplace add Zeev-L/playground
+
+# 2. Install any plugin (see table below for names)
+claude plugin install gstack@zeev-playground
+claude plugin install pm-product-discovery@zeev-playground
+claude plugin install marketing-skills@zeev-playground
 ```
 
-Then just ask Claude in natural language:
-```
-use the bulletize skill on this text: <your text>
-```
+In an interactive session you can use the slash-command equivalents:
+`/plugin marketplace add Zeev-L/playground` then `/plugin install <name>@zeev-playground`.
+Update everything later with `claude plugin marketplace update zeev-playground`.
 
-## Key Lessons Learned
+## Plugins (18)
 
-1. **Check the official structure FIRST.** Before building, look at
-   `anthropics/claude-plugins-official` -> `plugins/example-plugin`. Don't guess.
+| Plugin | What it is | Upstream source / attribution | Backup clone |
+|---|---|---|---|
+| `text-tools` | My own text-manipulation skills (e.g. `bulletize`) | Zeev-L (original) | n/a — local to this repo |
+| `agent-skills` | Production-grade software-engineering skills (spec, plan, TDD, review, ship) | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) · Addy Osmani · MIT | `Zeev-L/addyosmani-agent-skills` |
+| `gstack` | 60+ engineering skills: code review, debugging, QA, deploy, security | [garrytan/gstack](https://github.com/garrytan/gstack) · Garry Tan · MIT | `Zeev-L/gstack` |
+| `awesome-pm-skills` | 28+ AI-powered PM skills from Lenny's Podcast | [menkesu/awesome-pm-skills](https://github.com/menkesu/awesome-pm-skills) · menkesu · MIT | `Zeev-L/awesome-pm-skills` |
+| `pm-product-discovery` | Teresa Torres discovery: opportunity-solution trees, assumption tests, interview scripts | [phuryn/pm-skills](https://github.com/phuryn/pm-skills) · Paweł Huryn · MIT | `Zeev-L/pm-skills` |
+| `pm-product-strategy` | Strategy canvases: Lean/Business-Model, Porter's, SWOT, Ansoff | [phuryn/pm-skills](https://github.com/phuryn/pm-skills) · Paweł Huryn · MIT | `Zeev-L/pm-skills` |
+| `pm-toolkit` | Core PM toolkit skills | [phuryn/pm-skills](https://github.com/phuryn/pm-skills) · Paweł Huryn · MIT | `Zeev-L/pm-skills` |
+| `pm-execution` | Delivery / project management: sprint planning, retros, OKRs, stakeholder maps | [phuryn/pm-skills](https://github.com/phuryn/pm-skills) · Paweł Huryn · MIT | `Zeev-L/pm-skills` |
+| `pm-market-research` | Market and user research skills | [phuryn/pm-skills](https://github.com/phuryn/pm-skills) · Paweł Huryn · MIT | `Zeev-L/pm-skills` |
+| `pm-ai-shipping` | Shipping AI features: intended-vs-implemented, shipping artifacts | [phuryn/pm-skills](https://github.com/phuryn/pm-skills) · Paweł Huryn · MIT | `Zeev-L/pm-skills` |
+| `pm-data-analytics` | A/B test analysis, cohort analysis, SQL queries | [phuryn/pm-skills](https://github.com/phuryn/pm-skills) · Paweł Huryn · MIT | `Zeev-L/pm-skills` |
+| `marketing-skills` | SaaS PMM + biz-dev: GTM/launch, positioning, pricing, sales-enablement, CRO | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) · Corey Haines · MIT | `Zeev-L/marketingskills` |
+| `x` | Post and read tweets on X (Twitter) from Claude Code | [omriariav/omri-cc-stuff](https://github.com/omriariav/omri-cc-stuff) · Omri Ariav | `Zeev-L/omri-a.-cc-stuff` |
+| `gdoc-math` | Markdown + LaTeX → native Google Doc with editable equations | [omriariav/omri-cc-stuff](https://github.com/omriariav/omri-cc-stuff) · Omri Ariav | `Zeev-L/omri-a.-cc-stuff` |
+| `find-session` | Search past Claude Code conversations by keyword; get session IDs | [omriariav/omri-cc-stuff](https://github.com/omriariav/omri-cc-stuff) · Omri Ariav | `Zeev-L/omri-a.-cc-stuff` |
+| `setup-pulse` | Install the claude-pulse statusline for token-usage monitoring | [omriariav/omri-cc-stuff](https://github.com/omriariav/omri-cc-stuff) · Omri Ariav | `Zeev-L/omri-a.-cc-stuff` |
+| `claude-reviewer` | Review a project's `.claude/` setup against best practices | [omriariav/omri-cc-stuff](https://github.com/omriariav/omri-cc-stuff) · Omri Ariav | `Zeev-L/omri-a.-cc-stuff` |
+| `skill-reviewer` | Evaluate any skill's design quality and flag anti-patterns | [omriariav/omri-cc-stuff](https://github.com/omriariav/omri-cc-stuff) · Omri Ariav | `Zeev-L/omri-a.-cc-stuff` |
 
-2. **`marketplace.json` != `plugin.json`** — two different files:
-   - `marketplace.json` = the store (which plugins exist + where they live)
-   - `plugin.json` = one plugin's identity
+## How the backup / sync works
 
-3. **Plugin vs Skill vs Command:**
-   - **Plugin** = a wrapper/container; can hold many skills
-   - **Skill** (`skills/<name>/SKILL.md`) = Claude invokes it automatically from natural language
-   - **Command** (`commands/<name>.md`) = user invokes manually with `/plugin:command`
+Each external plugin is referenced from a **clone under my own `Zeev-L` account**, not the original
+repo, so the marketplace keeps working even if an upstream is renamed or deleted. Every clone carries
+a `.github/workflows/sync-upstream.yml` Action that runs daily (and on demand) to merge the latest
+from upstream and push, so the clones stay current. `text-tools` is my own original content and lives
+directly in this repo.
 
-4. **A skill's `description` matters** — Claude reads it to decide when to use the skill.
-   Make it clear and specific ("Use when the user wants to...").
+All referenced upstreams are **MIT-licensed**. Attribution to each original author is preserved above
+and in each clone's retained `LICENSE`.
 
-5. **After any change in GitHub:**
-   ```
-   /plugin marketplace update <marketplace-name>
-   /reload-plugins
-   ```
-   If state gets stuck, fully restart Claude Code.
+## Notes
 
-6. **GitHub creates folders via the filename** — type `folder/sub/file.md` and all
-   folders are created automatically. You can't rename a folder directly; create the
-   new path and delete the old one.
-
-7. **The "0 skills" count after /reload-plugins can be misleading** — the skill may
-   still be loaded. Test it by asking Claude to use it.
+- `gstack` includes skills that execute commands / automate a browser (`browse`, `scrape`,
+  deploy skills). It's a popular MIT repo by Garry Tan — treat those skills like any code that
+  runs locally.

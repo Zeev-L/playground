@@ -1,11 +1,171 @@
 {
   "name": "zeev-playground",
-  "owner": { "name": "Zeev-L" },
+  "description": "Zeev-L's personal Claude Code skill marketplace \u2014 engineering, product, project, PMM and biz-dev skills referenced from curated open-source repos (backed up to my own clones).",
+  "owner": {
+    "name": "Zeev-L"
+  },
   "plugins": [
     {
       "name": "text-tools",
       "source": "./text-tools",
-      "description": "A collection of text manipulation skills"
+      "description": "My text manipulation skills (e.g. bulletize)."
+    },
+    {
+      "name": "agent-skills",
+      "source": {
+        "source": "github",
+        "repo": "Zeev-L/addyosmani-agent-skills"
+      },
+      "description": "Production-grade software-engineering skills (spec, plan, TDD, review, ship). Addy Osmani, via my clone.",
+      "homepage": "https://github.com/addyosmani/agent-skills",
+      "license": "MIT"
+    },
+    {
+      "name": "gstack",
+      "source": {
+        "source": "github",
+        "repo": "Zeev-L/gstack"
+      },
+      "description": "Garry Tan's 60+ engineering skills: code review, debugging, QA, deploy, security. Via my clone.",
+      "homepage": "https://github.com/garrytan/gstack",
+      "license": "MIT"
+    },
+    {
+      "name": "awesome-pm-skills",
+      "source": {
+        "source": "github",
+        "repo": "Zeev-L/awesome-pm-skills"
+      },
+      "description": "28+ AI-powered PM skills from Lenny's Podcast (menkesu). Via my clone.",
+      "homepage": "https://github.com/menkesu/awesome-pm-skills",
+      "license": "MIT"
+    },
+    {
+      "name": "pm-product-discovery",
+      "source": {
+        "source": "github",
+        "repo": "Zeev-L/pm-skills",
+        "path": "pm-product-discovery"
+      },
+      "description": "Teresa Torres discovery: opportunity-solution trees, assumption tests, interview scripts. Pawel Huryn."
+    },
+    {
+      "name": "pm-product-strategy",
+      "source": {
+        "source": "github",
+        "repo": "Zeev-L/pm-skills",
+        "path": "pm-product-strategy"
+      },
+      "description": "Product strategy canvases: Lean/Business-Model, Porter's, SWOT, Ansoff. Pawel Huryn."
+    },
+    {
+      "name": "pm-toolkit",
+      "source": {
+        "source": "github",
+        "repo": "Zeev-L/pm-skills",
+        "path": "pm-toolkit"
+      },
+      "description": "Core PM toolkit skills. Pawel Huryn."
+    },
+    {
+      "name": "pm-execution",
+      "source": {
+        "source": "github",
+        "repo": "Zeev-L/pm-skills",
+        "path": "pm-execution"
+      },
+      "description": "Delivery / project management: sprint planning, retros, OKRs, stakeholder maps. Pawel Huryn."
+    },
+    {
+      "name": "pm-market-research",
+      "source": {
+        "source": "github",
+        "repo": "Zeev-L/pm-skills",
+        "path": "pm-market-research"
+      },
+      "description": "Market and user research skills. Pawel Huryn."
+    },
+    {
+      "name": "pm-ai-shipping",
+      "source": {
+        "source": "github",
+        "repo": "Zeev-L/pm-skills",
+        "path": "pm-ai-shipping"
+      },
+      "description": "Shipping AI features: intended-vs-implemented, shipping artifacts. Pawel Huryn."
+    },
+    {
+      "name": "pm-data-analytics",
+      "source": {
+        "source": "github",
+        "repo": "Zeev-L/pm-skills",
+        "path": "pm-data-analytics"
+      },
+      "description": "A/B test analysis, cohort analysis, SQL queries. Pawel Huryn."
+    },
+    {
+      "name": "marketing-skills",
+      "source": {
+        "source": "github",
+        "repo": "Zeev-L/marketingskills"
+      },
+      "description": "Corey Haines' SaaS PMM + biz-dev stack: GTM/launch, positioning, pricing, sales-enablement, CRO. Via my clone.",
+      "homepage": "https://github.com/coreyhaines31/marketingskills",
+      "license": "MIT"
+    },
+    {
+      "name": "x",
+      "source": {
+        "source": "github",
+        "repo": "Zeev-L/omri-a.-cc-stuff",
+        "path": "plugins/x"
+      },
+      "description": "Post and read tweets on X (Twitter) from Claude Code. Omri Ariav."
+    },
+    {
+      "name": "gdoc-math",
+      "source": {
+        "source": "github",
+        "repo": "Zeev-L/omri-a.-cc-stuff",
+        "path": "plugins/gdoc-math"
+      },
+      "description": "Markdown + LaTeX to a native Google Doc with editable equations. Omri Ariav."
+    },
+    {
+      "name": "find-session",
+      "source": {
+        "source": "github",
+        "repo": "Zeev-L/omri-a.-cc-stuff",
+        "path": "plugins/find-session"
+      },
+      "description": "Search past Claude Code conversations by keyword; get session IDs. Omri Ariav."
+    },
+    {
+      "name": "setup-pulse",
+      "source": {
+        "source": "github",
+        "repo": "Zeev-L/omri-a.-cc-stuff",
+        "path": "plugins/setup-pulse"
+      },
+      "description": "Install the claude-pulse statusline for token-usage monitoring. Omri Ariav."
+    },
+    {
+      "name": "claude-reviewer",
+      "source": {
+        "source": "github",
+        "repo": "Zeev-L/omri-a.-cc-stuff",
+        "path": "plugins/claude-reviewer"
+      },
+      "description": "Review a project's .claude/ setup against best practices. Omri Ariav."
+    },
+    {
+      "name": "skill-reviewer",
+      "source": {
+        "source": "github",
+        "repo": "Zeev-L/omri-a.-cc-stuff",
+        "path": "plugins/skill-reviewer"
+      },
+      "description": "Evaluate any skill's design quality and flag anti-patterns. Omri Ariav."
     }
   ]
 }

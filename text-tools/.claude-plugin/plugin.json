@@ -1,5 +1,8 @@
 {
   "name": "text-tools",
   "description": "A collection of text manipulation skills",
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "author": {
+    "name": "Zeev-L"
+  }
 }
