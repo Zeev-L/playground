@@ -105,6 +105,7 @@
     .list{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden; }
     .lrow{ display:grid; grid-template-columns:18px 6px 1fr 90px 150px 160px 36px; gap:10px; align-items:center; padding:10px 14px; border-bottom:1px solid var(--border); }
     .lrow:last-child{ border-bottom:none; } .lrow:hover{ background:var(--surface-2); } .lrow .sw{ width:6px; height:34px; border-radius:4px; background:var(--cat,#cbd0db); }
+    .lrow .selbox{ position:static; top:auto; inset-inline-start:auto; align-self:center; } .lrow>div{ min-width:0; } .lrow .lname{ word-break:break-word; }
     .lrow .lname{ font-weight:700; outline:none; border-radius:6px; padding:2px 4px; } .lrow .lname:focus{ background:var(--accent-soft); }
     .lrow .lnote{ font-size:11.5px; font-style:italic; color:var(--muted); }
     .lrow.done .lname{ text-decoration:line-through; color:var(--muted); }
