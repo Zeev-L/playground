@@ -1,4 +1,4 @@
-# zeev-playground — personal Claude Code skill marketplace
+# skills-marketplace — personal Claude Code skill marketplace
 
 ### 🔎 Browse the interactive catalog → **https://zeev-l.github.io/skills-marketplace/**
 _Filter 221 skills by role, search, and copy install commands — including “Copy all install commands.”_
@@ -16,14 +16,14 @@ repos (for backup + stability); each clone auto-syncs from its upstream daily vi
 claude plugin marketplace add Zeev-L/skills-marketplace
 
 # 2. Install any plugin (see table below for names)
-claude plugin install gstack@zeev-playground
-claude plugin install pm-product-discovery@zeev-playground
-claude plugin install marketing-skills@zeev-playground
+claude plugin install gstack@skills-marketplace
+claude plugin install pm-product-discovery@skills-marketplace
+claude plugin install marketing-skills@skills-marketplace
 ```
 
 In an interactive session you can use the slash-command equivalents:
-`/plugin marketplace add Zeev-L/skills-marketplace` then `/plugin install <name>@zeev-playground`.
-Update everything later with `claude plugin marketplace update zeev-playground`.
+`/plugin marketplace add Zeev-L/skills-marketplace` then `/plugin install <name>@skills-marketplace`.
+Update everything later with `claude plugin marketplace update skills-marketplace`.
 
 > **HTTPS install note.** 14 of the plugins install with no setup — the 13 `git-subdir` plugins
 > (everything from `pm-skills` and `omri-a.-cc-stuff`) plus local `text-tools`, because they use explicit

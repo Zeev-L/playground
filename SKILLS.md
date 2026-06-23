@@ -7,7 +7,7 @@ Plugins marked **⚠ one-time git-HTTPS config needed** are whole-repo `github` 
 
 ## text-tools  ·  _Utilities_  (1 skills)
 
-Upstream: **Zeev-L (original)** · License: — · Install: `claude plugin install text-tools@zeev-playground` · ✓ zero setup
+Upstream: **Zeev-L (original)** · License: — · Install: `claude plugin install text-tools@skills-marketplace` · ✓ zero setup
 
 | Skill | Author | Description |
 |---|---|---|
@@ -15,7 +15,7 @@ Upstream: **Zeev-L (original)** · License: — · Install: `claude plugin insta
 
 ## agent-skills  ·  _Software dev / DevOps/SRE_  (24 skills)
 
-Upstream: **addyosmani/agent-skills** · License: MIT · Install: `claude plugin install agent-skills@zeev-playground` · ⚠ one-time git-HTTPS config needed
+Upstream: **addyosmani/agent-skills** · License: MIT · Install: `claude plugin install agent-skills@skills-marketplace` · ⚠ one-time git-HTTPS config needed
 
 | Skill | Author | Description |
 |---|---|---|
@@ -46,7 +46,7 @@ Upstream: **addyosmani/agent-skills** · License: MIT · Install: `claude plugin
 
 ## gstack  ·  _Software dev / DevOps/SRE_  (59 skills)
 
-Upstream: **garrytan/gstack** · License: MIT · Install: `claude plugin install gstack@zeev-playground` · ⚠ one-time git-HTTPS config needed
+Upstream: **garrytan/gstack** · License: MIT · Install: `claude plugin install gstack@skills-marketplace` · ⚠ one-time git-HTTPS config needed
 
 | Skill | Author | Description |
 |---|---|---|
@@ -112,7 +112,7 @@ Upstream: **garrytan/gstack** · License: MIT · Install: `claude plugin install
 
 ## awesome-pm-skills  ·  _Product mgmt_  (29 skills)
 
-Upstream: **menkesu/awesome-pm-skills** · License: MIT · Install: `claude plugin install awesome-pm-skills@zeev-playground` · ⚠ one-time git-HTTPS config needed
+Upstream: **menkesu/awesome-pm-skills** · License: MIT · Install: `claude plugin install awesome-pm-skills@skills-marketplace` · ⚠ one-time git-HTTPS config needed
 
 | Skill | Author | Description |
 |---|---|---|
@@ -148,7 +148,7 @@ Upstream: **menkesu/awesome-pm-skills** · License: MIT · Install: `claude plug
 
 ## pm-product-discovery  ·  _Product mgmt_  (13 skills)
 
-Upstream: **phuryn/pm-skills** · License: MIT · Install: `claude plugin install pm-product-discovery@zeev-playground` · ✓ zero setup
+Upstream: **phuryn/pm-skills** · License: MIT · Install: `claude plugin install pm-product-discovery@skills-marketplace` · ✓ zero setup
 
 | Skill | Author | Description |
 |---|---|---|
@@ -168,7 +168,7 @@ Upstream: **phuryn/pm-skills** · License: MIT · Install: `claude plugin instal
 
 ## pm-product-strategy  ·  _Product mgmt_  (12 skills)
 
-Upstream: **phuryn/pm-skills** · License: MIT · Install: `claude plugin install pm-product-strategy@zeev-playground` · ✓ zero setup
+Upstream: **phuryn/pm-skills** · License: MIT · Install: `claude plugin install pm-product-strategy@skills-marketplace` · ✓ zero setup
 
 | Skill | Author | Description |
 |---|---|---|
@@ -187,7 +187,7 @@ Upstream: **phuryn/pm-skills** · License: MIT · Install: `claude plugin instal
 
 ## pm-toolkit  ·  _Product mgmt_  (4 skills)
 
-Upstream: **phuryn/pm-skills** · License: MIT · Install: `claude plugin install pm-toolkit@zeev-playground` · ✓ zero setup
+Upstream: **phuryn/pm-skills** · License: MIT · Install: `claude plugin install pm-toolkit@skills-marketplace` · ✓ zero setup
 
 | Skill | Author | Description |
 |---|---|---|
@@ -198,7 +198,7 @@ Upstream: **phuryn/pm-skills** · License: MIT · Install: `claude plugin instal
 
 ## pm-execution  ·  _Project mgmt_  (16 skills)
 
-Upstream: **phuryn/pm-skills** · License: MIT · Install: `claude plugin install pm-execution@zeev-playground` · ✓ zero setup
+Upstream: **phuryn/pm-skills** · License: MIT · Install: `claude plugin install pm-execution@skills-marketplace` · ✓ zero setup
 
 | Skill | Author | Description |
 |---|---|---|
@@ -221,7 +221,7 @@ Upstream: **phuryn/pm-skills** · License: MIT · Install: `claude plugin instal
 
 ## pm-market-research  ·  _Product mgmt_  (7 skills)
 
-Upstream: **phuryn/pm-skills** · License: MIT · Install: `claude plugin install pm-market-research@zeev-playground` · ✓ zero setup
+Upstream: **phuryn/pm-skills** · License: MIT · Install: `claude plugin install pm-market-research@skills-marketplace` · ✓ zero setup
 
 | Skill | Author | Description |
 |---|---|---|
@@ -235,7 +235,7 @@ Upstream: **phuryn/pm-skills** · License: MIT · Install: `claude plugin instal
 
 ## pm-ai-shipping  ·  _Product mgmt_  (2 skills)
 
-Upstream: **phuryn/pm-skills** · License: MIT · Install: `claude plugin install pm-ai-shipping@zeev-playground` · ✓ zero setup
+Upstream: **phuryn/pm-skills** · License: MIT · Install: `claude plugin install pm-ai-shipping@skills-marketplace` · ✓ zero setup
 
 | Skill | Author | Description |
 |---|---|---|
@@ -244,7 +244,7 @@ Upstream: **phuryn/pm-skills** · License: MIT · Install: `claude plugin instal
 
 ## pm-data-analytics  ·  _Product mgmt_  (3 skills)
 
-Upstream: **phuryn/pm-skills** · License: MIT · Install: `claude plugin install pm-data-analytics@zeev-playground` · ✓ zero setup
+Upstream: **phuryn/pm-skills** · License: MIT · Install: `claude plugin install pm-data-analytics@skills-marketplace` · ✓ zero setup
 
 | Skill | Author | Description |
 |---|---|---|
@@ -254,7 +254,7 @@ Upstream: **phuryn/pm-skills** · License: MIT · Install: `claude plugin instal
 
 ## marketing-skills  ·  _PMM / Biz dev_  (45 skills)
 
-Upstream: **coreyhaines31/marketingskills** · License: MIT · Install: `claude plugin install marketing-skills@zeev-playground` · ⚠ one-time git-HTTPS config needed
+Upstream: **coreyhaines31/marketingskills** · License: MIT · Install: `claude plugin install marketing-skills@skills-marketplace` · ⚠ one-time git-HTTPS config needed
 
 | Skill | Author | Description |
 |---|---|---|
@@ -306,7 +306,7 @@ Upstream: **coreyhaines31/marketingskills** · License: MIT · Install: `claude 
 
 ## x  ·  _Utilities_  (2 skills)
 
-Upstream: **omriariav/omri-cc-stuff** · License: MIT · Install: `claude plugin install x@zeev-playground` · ✓ zero setup
+Upstream: **omriariav/omri-cc-stuff** · License: MIT · Install: `claude plugin install x@skills-marketplace` · ✓ zero setup
 
 | Skill | Author | Description |
 |---|---|---|
@@ -315,7 +315,7 @@ Upstream: **omriariav/omri-cc-stuff** · License: MIT · Install: `claude plugin
 
 ## gdoc-math  ·  _Utilities_  (1 skills)
 
-Upstream: **omriariav/omri-cc-stuff** · License: MIT · Install: `claude plugin install gdoc-math@zeev-playground` · ✓ zero setup
+Upstream: **omriariav/omri-cc-stuff** · License: MIT · Install: `claude plugin install gdoc-math@skills-marketplace` · ✓ zero setup
 
 | Skill | Author | Description |
 |---|---|---|
@@ -323,7 +323,7 @@ Upstream: **omriariav/omri-cc-stuff** · License: MIT · Install: `claude plugin
 
 ## find-session  ·  _Utilities_  (1 skills)
 
-Upstream: **omriariav/omri-cc-stuff** · License: MIT · Install: `claude plugin install find-session@zeev-playground` · ✓ zero setup
+Upstream: **omriariav/omri-cc-stuff** · License: MIT · Install: `claude plugin install find-session@skills-marketplace` · ✓ zero setup
 
 | Skill | Author | Description |
 |---|---|---|
@@ -331,7 +331,7 @@ Upstream: **omriariav/omri-cc-stuff** · License: MIT · Install: `claude plugin
 
 ## setup-pulse  ·  _Utilities_  (1 skills)
 
-Upstream: **omriariav/omri-cc-stuff** · License: MIT · Install: `claude plugin install setup-pulse@zeev-playground` · ✓ zero setup
+Upstream: **omriariav/omri-cc-stuff** · License: MIT · Install: `claude plugin install setup-pulse@skills-marketplace` · ✓ zero setup
 
 | Skill | Author | Description |
 |---|---|---|
@@ -339,7 +339,7 @@ Upstream: **omriariav/omri-cc-stuff** · License: MIT · Install: `claude plugin
 
 ## claude-reviewer  ·  _Utilities_  (1 skills)
 
-Upstream: **omriariav/omri-cc-stuff** · License: MIT · Install: `claude plugin install claude-reviewer@zeev-playground` · ✓ zero setup
+Upstream: **omriariav/omri-cc-stuff** · License: MIT · Install: `claude plugin install claude-reviewer@skills-marketplace` · ✓ zero setup
 
 | Skill | Author | Description |
 |---|---|---|
@@ -347,7 +347,7 @@ Upstream: **omriariav/omri-cc-stuff** · License: MIT · Install: `claude plugin
 
 ## skill-reviewer  ·  _Utilities_  (1 skills)
 
-Upstream: **omriariav/omri-cc-stuff** · License: MIT · Install: `claude plugin install skill-reviewer@zeev-playground` · ✓ zero setup
+Upstream: **omriariav/omri-cc-stuff** · License: MIT · Install: `claude plugin install skill-reviewer@skills-marketplace` · ✓ zero setup
 
 | Skill | Author | Description |
 |---|---|---|

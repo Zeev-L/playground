@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>zeev-playground · skill catalog</title>
+<title>skills-marketplace · skill catalog</title>
 <style>
   :root {
     --bg:#0d1117; --panel:#161b22; --panel2:#1c232c; --border:#2b333d;
@@ -82,7 +82,7 @@
 <body>
 <div class="wrap">
   <header class="hero">
-    <h1 id="home">zeev-playground · skill catalog</h1>
+    <h1 id="home">skills-marketplace · skill catalog</h1>
     <p class="intro" id="intro">Loading…</p>
     <div class="controls">
       <input id="search" class="search" type="search" placeholder="Search all skills — by name, description, plugin or author (works from any screen)…" autocomplete="off" />
@@ -111,7 +111,7 @@ const skillsInPluginRole = (plugin,role)=>state.data.skills.filter(s=>s.plugin==
 
 function buildInstallAll(){
   const d=state.data, L=[];
-  L.push(`# zeev-playground — install everything (${d.total_plugins} plugins, ${d.total_skills} skills)`);
+  L.push(`# skills-marketplace — install everything (${d.total_plugins} plugins, ${d.total_skills} skills)`);
   L.push("# 1) Add the marketplace");
   L.push("claude plugin marketplace add Zeev-L/skills-marketplace");
   L.push("");

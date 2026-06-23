@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the zeev-playground skill catalog.
+"""Generate the skills-marketplace skill catalog.
 
 Reads .claude-plugin/marketplace.json, resolves each plugin's skill files from the
 source clones (shallow-cloning any that are missing), and writes:
@@ -186,7 +186,7 @@ def main():
             up, attr, lic, home = UPSTREAM.get(cdir, (cdir, "—", "MIT", f"https://github.com/{cdir}"))
             src_repo = f"Zeev-L/{cdir}"
         base_role = ROLE.get(name, "Utilities")
-        install = f"claude plugin install {name}@zeev-playground"
+        install = f"claude plugin install {name}@skills-marketplace"
         # whole-repo `github` sources are cloned over SSH by the installer -> need a one-time
         # git-HTTPS config on machines without a GitHub SSH key. git-subdir + local are zero-setup.
         src = pl["source"]
@@ -211,7 +211,7 @@ def main():
 
     all_skills.sort(key=lambda s: (s["plugin"], s["skill"]))
     roles_present = [r for r in ROLES_ORDER if any(s["role"] == r for s in all_skills)]
-    data = {"marketplace": mkt.get("name", "zeev-playground"),
+    data = {"marketplace": mkt.get("name", "skills-marketplace"),
             "roles": roles_present, "plugins": plugins, "skills": all_skills,
             "total_skills": len(all_skills), "total_plugins": len(plugins),
             "https_setup_cmd": 'git config --global url."https://github.com/".insteadOf "git@github.com:"'}
