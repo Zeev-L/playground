@@ -1,6 +1,6 @@
 # zeev-playground — personal Claude Code skill marketplace
 
-### 🔎 Browse the interactive catalog → **https://zeev-l.github.io/playground/**
+### 🔎 Browse the interactive catalog → **https://zeev-l.github.io/skills-marketplace/**
 _Filter 221 skills by role, search, and copy install commands — including “Copy all install commands.”_
 
 ---
@@ -13,7 +13,7 @@ repos (for backup + stability); each clone auto-syncs from its upstream daily vi
 
 ```bash
 # 1. Add this marketplace
-claude plugin marketplace add Zeev-L/playground
+claude plugin marketplace add Zeev-L/skills-marketplace
 
 # 2. Install any plugin (see table below for names)
 claude plugin install gstack@zeev-playground
@@ -22,7 +22,7 @@ claude plugin install marketing-skills@zeev-playground
 ```
 
 In an interactive session you can use the slash-command equivalents:
-`/plugin marketplace add Zeev-L/playground` then `/plugin install <name>@zeev-playground`.
+`/plugin marketplace add Zeev-L/skills-marketplace` then `/plugin install <name>@zeev-playground`.
 Update everything later with `claude plugin marketplace update zeev-playground`.
 
 > **HTTPS install note.** 14 of the plugins install with no setup — the 13 `git-subdir` plugins
