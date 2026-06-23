@@ -18,7 +18,7 @@
       "description": "My text manipulation skills (e.g. bulletize).",
       "upstream": "Zeev-L (original)",
       "attribution": "Zeev-L",
-      "source_url": "https://github.com/Zeev-L/playground",
+      "source_url": "https://github.com/Zeev-L/skills-marketplace",
       "license": "—",
       "install": "claude plugin install text-tools@skills-marketplace",
       "skill_count": 1,
@@ -4286,9 +4286,9 @@
       "role": "Utilities",
       "install": "claude plugin install text-tools@skills-marketplace",
       "author": "Zeev-L",
-      "source_url": "https://github.com/Zeev-L/playground",
+      "source_url": "https://github.com/Zeev-L/skills-marketplace",
       "upstream": "Zeev-L (original)",
-      "source_repo": "Zeev-L/playground",
+      "source_repo": "Zeev-L/skills-marketplace",
       "setup": "zero"
     },
     {
